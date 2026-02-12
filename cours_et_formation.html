@@ -5,67 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formations - Département Informatique EFREI</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .formations-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .formations-table th, .formations-table td {
+            border: 1px solid #e0e0e0;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        .formations-table th {
+            background-color: #f7f9fc;
+            color: #0d2c4a;
+            font-weight: bold;
+        }
+        .formations-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Département Informatique - EFREI Paris</h1>
-        <nav>
-            <ul>
-                <li><a href="acceuil.html">Accueil</a></li>
-                <li><a href="cours_et_formation.html">Formations</a></li>
-                <li><a href="equipe_enseignante.html">Équipe</a></li>
-            </ul>
-        </nav>
+
+    <header class="header-banner">
+        <h1>Efrei - Département Informatique</h1>
     </header>
 
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="equipe_enseignante.html">Équipe</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <section id="formations-introduction">
-            <h2>Nos Cursus et Formations en Informatique</h2>
-            <p>
-                Le département Informatique de l'EFREI propose plusieurs cursus pour former des ingénieurs généralistes et experts du numérique. Découvrez nos programmes, conçus pour répondre aux défis technologiques de demain.
-            </p>
-        </section>
-
-        <section id="cycle-preparatoire">
-            <h3>Cycle Préparatoire Intégré</h3>
-            <p>Les deux premières années post-bac pour acquérir les fondamentaux scientifiques et techniques.</p>
-            <ul>
-                <li>Mathématiques pour l'ingénieur</li>
-                <li>Algorithmique et programmation (Python, C)</li>
-                <li>Architecture des ordinateurs</li>
-            </ul>
-        </section>
-
-        <section id="cycle-ingenieur">
-            <h3>Cycle Ingénieur</h3>
-            <p>Le cycle de trois ans pour devenir ingénieur, avec un choix de majeures pour se spécialiser.</p>
-            
-            <h4>Majeure "Software Engineering"</h4>
-            <ul>
-                <li>Développement web avancé</li>
-                <li>Architectures microservices</li>
-                <li>DevOps</li>
-            </ul>
-
-            <h4>Majeure "Cybersécurité"</h4>
-            <ul>
-                <li>Sécurité des réseaux</li>
-                <li>Cryptographie appliquée</li>
-                <li>Audit de sécurité</li>
-            </ul>
+        <section class="content-block">
+            <h2>Nos Cursus et Formations</h2>
+            <p>Découvrez les cursus conçus pour vous préparer aux métiers du numérique, du cycle préparatoire au diplôme d'ingénieur.</p>
+            <table class="formations-table">
+                <thead>
+                    <tr>
+                        <th>Niveau</th>
+                        <th>Diplôme / Cycle</th>
+                        <th>Principales compétences visées</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Post-Bac</td>
+                        <td>Cycle Préparatoire Intégré</td>
+                        <td>Bases scientifiques, Algorithmique, Projets</td>
+                    </tr>
+                    <tr>
+                        <td>Bac+3</td>
+                        <td>Bachelor (RNCP Niveau 6)</td>
+                        <td>Développement Web & Mobile, Cybersécurité, Data</td>
+                    </tr>
+                    <tr>
+                        <td>Bac+5</td>
+                        <td>Diplôme d'Ingénieur (Grade Master)</td>
+                        <td>Software Engineering, Big Data & IA, Réseaux</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
 
     <footer>
-        <nav>
-            <ul>
-                <li><a href="acceuil.html">Accueil</a></li>
-                <li><a href="cours_et_formation.html">Formations</a></li>
-                <li><a href="equipe_enseignante.html">Équipe</a></li>
-            </ul>
-        </nav>
-        <p><a href="#">À propos de ce site</a></p>
-        <p>&copy; 2026 - Département Informatique EFREI</p>
+        <p>&copy; 2026 Efrei Paris - <a href="apropos.html">À propos de nous</a></p>
     </footer>
+
 </body>
 </html>

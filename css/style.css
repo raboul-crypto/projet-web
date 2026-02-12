@@ -1,125 +1,135 @@
-/* Réinitialisation de base et définition des polices */
-body, html {
+/* Configuration Générale */
+* {
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
 }
 
-/* Organisation générale du corps de la page */
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9; /* Fond gris clair comme sur ta photo */
+    color: #333;
+    line-height: 1.6;
 }
 
-main {
-    flex: 1;
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-}
-
-/* Header */
+/* Header - Couleurs EFREI */
 header {
-    background: #002349; /* Bleu foncé EFREI */
-    color: #fff;
-    padding: 1rem 0;
+    background-color: #1a3a61; /* Bleu marine profond */
+    color: white;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 20px 0 0 0;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.2rem;
+.header-banner h1 {
+    font-size: 1.8rem;
+    padding-bottom: 20px;
+    text-transform: none;
 }
 
-/* Navigation */
-nav ul {
-    padding: 0;
+/* Barre de Navigation Bleu Ciel */
+.main-nav {
+    background-color: #729fcf; /* Bleu ciel de la maquette */
+    padding: 10px 0;
+}
+
+.main-nav ul {
     list-style: none;
-    background: #003b7a;
     display: flex;
     justify-content: center;
-    margin: 1rem 0 0 0;
+    gap: 20px;
 }
 
-nav ul li {
-    display: inline-block;
-}
-
-nav ul li a {
+.main-nav a {
+    color: white;
     text-decoration: none;
-    color: #fff;
-    padding: 0.8rem 1.5rem;
-    display: block;
-    transition: background-color 0.3s;
+    font-weight: 500;
+    font-size: 0.9rem;
 }
 
-nav ul li a:hover, nav ul li a.active {
-    background-color: #005fbf; /* Un bleu plus clair pour le survol */
+/* Blocs de contenu (Les cartes blanches) */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.content-block {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 15px; /* Coins arrondis de la maquette */
+    padding: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.content-block h2 {
+    color: #1a3a61;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+/* Filigrane (Dôme Panthéon) */
+.watermark {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 50px;
+    opacity: 0.1; /* Très discret */
+}
+
+/* Section Chiffres Clés & Campus */
+.info-globale {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.stat-card, .campus-card {
+    background: #1a3a61;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Carrousel (Base visuelle) */
+.carousel-container {
+    background: #f9f9f9;
+    border-radius: 10px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #ccc;
 }
 
 /* Footer */
 footer {
-    background: #222;
-    color: #fff;
+    background-color: #1a3a61;
+    color: white;
+    padding: 40px 20px;
     text-align: center;
-    padding-top: 1rem;
+    margin-top: 50px;
 }
 
-footer nav ul {
-    background: none;
-    margin-bottom: 1rem;
-}
-
-footer a {
-    color: #fff;
+.footer-nav a {
+    color: #729fcf;
     text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
 }
 
-footer a:hover {
-    text-decoration: underline;
-}
-
-footer p {
-    margin: 0.5rem 0;
-}
-
-/* Design responsive */
+/* RESPONSIVE - Media Queries (Obligatoire) */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8rem;
+    .info-globale {
+        grid-template-columns: 1fr; /* Empilement sur mobile */
     }
-
-    nav ul {
+    
+    .main-nav ul {
         flex-direction: column;
+        align-items: center;
     }
-
-    nav ul li a {
-        padding: 0.8rem;
-        border-bottom: 1px solid #444;
-    }
-
-    nav ul li:last-child a {
-        border-bottom: none;
-    }
-}
-
-/* Classes pour sections et articles */
-section {
-    padding: 25px;
-    margin-bottom: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-h2 {
-    color: #002349;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 10px;
-    margin-top: 0;
 }
