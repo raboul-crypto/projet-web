@@ -7,14 +7,14 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f9; /* Fond gris clair comme sur ta photo */
+    background-color: #EAECEE; /* Un gris clair et neutre */
     color: #333;
     line-height: 1.6;
 }
 
 /* Header - Couleurs EFREI */
 header {
-    background-color: #1a3a61; /* Bleu marine profond */
+    background-color: rgb(22, 55, 103); /* Bleu marine profond */
     color: white;
     text-align: center;
     padding: 20px 0 0 0;
@@ -42,8 +42,15 @@ header {
 .main-nav a {
     color: white;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 0.9rem;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 /* Blocs de contenu (Les cartes blanches) */
@@ -97,29 +104,91 @@ main {
 
 /* Carrousel (Base visuelle) */
 .carousel-container {
+    position: relative;
     background: #f9f9f9;
     border-radius: 10px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px dashed #ccc;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    width: 100%;
+    height: 350px; /* Fixe la hauteur pour éviter le décalage */
 }
+
+#carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    display: none; /* Cache toutes les images par défaut */
+    width: 100%;
+    height: 100%;
+}
+
+.slide.active {
+    display: block; /* Affiche uniquement l'image active */
+}
+
+#carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* C'est ça qui empêche le zoom moche (contain au lieu de cover) */
+    background-color: #f0f0f0; /* Fond gris pour combler les bords si l'image est petite */
+}
+
+/* Boutons flèches */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(22, 55, 103, 0.7); /* Ton bleu marine en transparent */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgb(22, 55, 103);
+}
+.prev { left: 10px; }
+.next { right: 10px; }
 
 /* Footer */
 footer {
-    background-color: #1a3a61;
+    background-color: rgb(22, 55, 103);
     color: white;
     padding: 40px 20px;
     text-align: center;
     margin-top: 50px;
 }
 
-.footer-nav a {
-    color: #729fcf;
+footer a {
+    color: #fff;
     text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-nav a {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 8px 15px;
     margin-bottom: 10px;
     display: inline-block;
+    transition: background-color 0.3s ease;
+}
+.footer-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* RESPONSIVE - Media Queries (Obligatoire) */

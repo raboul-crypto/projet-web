@@ -1,40 +1,90 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Accueil - Département Informatique EFREI</title>
-    <link rel="stylesheet" href="css/style.css"> </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Département Informatique EFREI</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
 <body>
-    <header>
-        <div class="header-top">
-            <img src="img/logo-efrei.png" alt="Logo EFREI" class="logo">
-        </div>
+    <header style="background-color: rgb(22, 55, 103);">
         <div class="header-banner">
             <h1>Efrei - Département informatique</h1>
         </div>
         <nav class="main-nav">
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="cours_et_formation.html">formation et cours</a></li>
-                <li><a href="equipe_enseignante.html">equipe</a></li>
-                <li><a href="contact.html">contacter nous</a></li>
+                <li><a href="cours_et_formation.html">Formations</a></li>
+                <li><a href="equipe_enseignante.html">Équipe</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="content-block">
-            <h2>Bienvenue sur le site du département Informatique de l'EFREI</h2>
-            <p>
-                Ce site vitrine a pour but de présenter le département Informatique de l'EFREI Paris. 
-                Vous y trouverez des informations sur nos formations, notre équipe pédagogique, 
-                ainsi que les projets menés par nos étudiants.
-            </p>
-        </section>
-
         <section class="content-block" id="projets">
             <div class="block-header">
                 <h2>nos projet</h2>
-                <img src="img/pantheon-icon.png" alt="" class="watermark">
+                <img src="../img/pantheon-icon.png" alt="" class="watermark">
             </div>
             <div class="carousel-container">
+                <div id="carousel">
+                    <img src="../img/gojo.jpg" alt="Projet 1" class="slide active">
+                    <img src="../img/Mao_Tse_Tung.jpg" alt="Projet 2" class="slide">
+                    <img src="../img/minh.jpg" alt="Projet 3" class="slide">
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
+        </section>
+
+        <section class="content-block" id="actualites">
+            <div class="block-header">
+                <h2>actualités du département</h2>
+                <img src="../img/pantheon-icon.png" alt="" class="watermark">
+            </div>
+            <div class="news-container">
+                <article>
+                    <h3>Journée Portes Ouvertes</h3>
+                    <p><strong>Date :</strong> 15 Mars 2026. Venez découvrir nos laboratoires et échanger avec les
+                        étudiants du département Informatique.</p>
+                </article>
+                <hr style="margin: 15px 0; border: 0; border-top: 1px solid #eee;">
+                <article>
+                    <h3>Conférence Cybersécurité</h3>
+                    <p>Une conférence exceptionnelle sur les enjeux de l'IA dans la sécurité numérique aura lieu
+                        prochainement dans l'amphi principal.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="info-globale">
+            <div class="stat-card">
+                <h3>Chiffres Clés</h3>
+                <p>100% Numérique | 50+ Partenaires</p>
+            </div>
+            <section class="info-globale">
+                <div class="stat-card">
+                    <h3>Chiffres Clés</h3>
+                    <p>100% Numérique | 50+ Partenaires</p>
+                </div>
+                <div class="campus-card">
+                    <h3>Nos Campus</h3>
+                    <p>Paris & Bordeaux</p>
+                </div>
+            </section>
+    </main>
+
+    <footer style="background-color: rgb(22, 55, 103); color: white;">
+        <div class="footer-content">
+            <a href="apropos.html" style="color: #fff; text-decoration: underline;">À propos de nous</a>
+            <p>&copy; 2026 - Département Informatique EFREI [cite: 29]</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
