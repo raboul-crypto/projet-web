@@ -9,18 +9,30 @@
 </head>
 
 <body>
-    <header style="background-color: rgb(22, 55, 103);">
-        <div class="header-banner">
-            <h1>Efrei - Département informatique</h1>
+<header style="background-color: rgb(22, 55, 103); display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    
+    <div style="width: 40px;"></div> 
+
+    <div class="header-banner">
+        <h1 style="color: white; margin: 0; text-align: center; font-size: 1.5rem;">Efrei - Département informatique</h1>
+    </div>
+    <div id="openMenu" style="cursor: pointer; width: 40px; text-align: right;">&#9776;</div>
+</header>
+
+    <div id="mySidebar" class="sidebar">        <div class="sidebar-header">
+            <h3 style="margin: 0; color: rgb(22, 55, 103) ;">Navigation</h3>
         </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="cours_et_formation.html">Formations</a></li>
-                <li><a href="equipe_enseignante.html">Équipe</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div class="sidebar-menu">
+            <a href="cours_et_formation.html">Formation et cours</a>
+            <a href="equipe_enseignante.html">Équipe</a>
+            <a href="contact.html">Contacter nous</a>
+            <a href="apropos.html">À propos de nous</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">Fermer</a>
+
+        </div>
+    </div>
+
+    <div id="overlay" onclick="closeNav()"></div>
 
     <main>
         <section class="content-block" id="projets">
@@ -38,7 +50,6 @@
                 <button class="next" onclick="moveSlide(1)">&#10095;</button>
             </div>
         </section>
-        </section>
 
         <section class="content-block" id="actualites">
             <div class="block-header">
@@ -48,65 +59,49 @@
             <div class="news-container">
                 <article>
                     <h3>Journée Portes Ouvertes</h3>
-                    <p><strong>Date :</strong> 15 Mars 2026. Venez découvrir nos laboratoires et échanger avec les
-                        étudiants du département Informatique.</p>
+                    <p><strong>Date :</strong> 15 Mars 2026. Venez découvrir nos laboratoires.</p>
                 </article>
                 <hr style="margin: 15px 0; border: 0; border-top: 1px solid #eee;">
                 <article>
                     <h3>Conférence Cybersécurité</h3>
-                    <p>Une conférence exceptionnelle sur les enjeux de l'IA dans la sécurité numérique aura lieu
-                        prochainement dans l'amphi principal.</p>
+                    <p>Une conférence exceptionnelle sur les enjeux de l'IA.</p>
                 </article>
             </div>
         </section>
 
-        <section class="info-globale">
-            <div class="stat-card">
+        <section class="info-globale" style="display: flex; gap: 20px; justify-content: center; margin-bottom: 30px;">
+            <div class="stat-card" style="background: #1a3a61; color: white; padding: 20px; border-radius: 15px; flex: 1; text-align: center;">
                 <h3>Chiffres Clés</h3>
                 <p>100% Numérique | 50+ Partenaires</p>
             </div>
-            <section class="info-globale">
-                <div class="stat-card">
-                    <h3>Chiffres Clés</h3>
-                    <p>100% Numérique | 50+ Partenaires</p>
-                </div>
-                <div class="campus-card">
-                    <h3>Nos Campus</h3>
-                    <p>Paris & Bordeaux</p>
-                </div>
-            </section>
+            <div class="campus-card" style="background: #1a3a61; color: white; padding: 20px; border-radius: 15px; flex: 1; text-align: center;">
+                <h3>Nos Campus</h3>
+                <p>Paris & Bordeaux</p>
+            </div>
+        </section>
     </main>
 
-<footer style="background-color: rgb(22, 55, 103); color: white; padding: 40px 20px; position: relative;">
-    <div class="footer-container" style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
-        <div class="contact-acceuil" style="text-align: left; font-size: 0.85rem;">
-            <p><strong>Contact Acceuil :</strong></p>
-            <p>+33 188 289 000</p>
+    <footer style="background-color: rgb(22, 55, 103); color: white; padding: 40px 20px;">
+        <div class="footer-container" style="display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
+            <div class="contact-acceuil">
+                <p><strong>Contact Accueil :</strong></p>
+                <p>+33 188 289 000</p>
+            </div>
+            <div class="campus-info">
+                <p><strong>Campus Paris :</strong></p>
+                <p>30-32 Av. de la République, 94800 Villejuif</p>
+            </div>
+            <div class="campus-info">
+                <p><strong>Campus Bordeaux :</strong></p>
+                <p>83 Rue Lucien Faure, 33000 Bordeaux</p>
+            </div>
         </div>
-        <div class="campus-info" style="text-align: left; font-size: 0.85rem;">
-            <p><strong>Campus Paris :</strong></p>
-            <p>+33 188 289 001</p>
-            <p>admissions@efrei.fr</p>
-            <p>30-32 Av. de la République, 94800 Villejuif</p>
+        <div style="text-align: center; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+            <a href="apropos.html" style="color: #fff;">À propos de nous</a>
+            <p>&copy; 2026 - Département Informatique EFREI</p>
         </div>
-
-
-        <div class="campus-info" style="text-align: left; font-size: 0.85rem;">
-            <p><strong>Campus Bordeaux :</strong></p>
-            <p>+33 582 060 162</p>
-            <p>admissions@efrei.fr</p>
-            <p>83 Rue Lucien Faure, 33000 Bordeaux</p>
-        </div>
-
-    </div>
-
-    <div style="text-align: center; margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
-        <a href="apropos.html" style="color: #fff; text-decoration: underline; margin-bottom: 10px; display: inline-block;">À propos de nous</a>
-        <p>&copy; 2026 - Département Informatique EFREI</p>
-    </div>
-</footer>
+    </footer>
 
     <script src="../js/script.js"></script>
 </body>
-
 </html>

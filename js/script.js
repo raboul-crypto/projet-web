@@ -36,3 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+function openNav() {
+    document.getElementById("mySidebar").style.width = "300px"; // Ouvre à 300px
+    document.getElementById("overlay").style.display = "block"; // Affiche le voile
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0"; // Referme
+    document.getElementById("overlay").style.display = "none"; // Cache le voile
+}
+
+document.getElementById("openMenu").onclick = openNav;

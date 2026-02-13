@@ -191,7 +191,6 @@ footer a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* RESPONSIVE - Media Queries (Obligatoire) */
 @media (max-width: 768px) {
     .info-globale {
         grid-template-columns: 1fr; /* Empilement sur mobile */
@@ -201,4 +200,63 @@ footer a:hover {
         flex-direction: column;
         align-items: center;
     }
+}
+
+
+.sidebar-menu a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #1a3a61;
+    display: block;
+    border-bottom: 1px solid #f1f1f1;
+    transition: 0.3s;
+}
+
+.sidebar-menu a:hover {
+    background-color: #729fcf; 
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1; 
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2000; 
+    top: 0;
+    right: 0; 
+    background-color: #fff;
+    transition: 0.5s; 
+    overflow-x: hidden;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+}
+
+#overlay {
+    display: none; 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1999;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+h1 {
+    color: white;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#openMenu img {
+    background-color: transparent !important; /* Force la transparence */
+    border: none; /* Enlève une éventuelle bordure */
 }
