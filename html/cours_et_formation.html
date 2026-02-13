@@ -3,41 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formations - Département Informatique EFREI</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        .formations-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        .formations-table th, .formations-table td {
-            border: 1px solid #e0e0e0;
-            padding: 12px 15px;
-            text-align: left;
-        }
-        .formations-table th {
-            background-color: #f7f9fc;
-            color: #0d2c4a;
-            font-weight: bold;
-        }
-        .formations-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-    </style>
+    <title>Formations - Efrei</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<header style="background-color: rgb(22, 55, 103); display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
-    <a href="https://www.efrei.fr">
-    <div style="width: 150px;"> <img src="../img/image_efrei.png" alt="Logo EFREI" style="height: 40px; display: block;"href="https://www.efrei.fr"></div>
-    </a>
-    <div class="header-banner" style="flex: 1;">
-        <h1 style="color: white; margin: 0; text-align: center; font-size: 1.5rem;">Efrei - Département informatique</h1>
-    </div>
-    <div id="openMenu" style="cursor: pointer; width: 150px; text-align: right; color: white; font-size: 30px;">
-        &#9776;
-    </div>
-</header>
+
+    <header
+        style="background-color: rgb(22, 55, 103); display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+        <a href="https://www.efrei.fr">
+            <div style="width: 150px;"> <img src="../img/image_efrei.png" alt="Logo EFREI"
+                    style="height: 40px; display: block;" href="https://www.efrei.fr"></div>
+        </a>
+        <div class="header-banner" style="flex: 1;">
+            <h1 style="color: white; margin: 0; text-align: center; font-size: 1.5rem;">Efrei - Département informatique
+            </h1>
+        </div>
+        <div id="openMenu" style="cursor: pointer; width: 150px; text-align: right; color: white; font-size: 30px;">
+            &#9776;
+        </div>
+    </header>
 
     <div id="mySidebar" class="sidebar">        <div class="sidebar-header">
             <h3 style="margin: 0; color: rgb(22, 55, 103) ;">Navigation</h3>
@@ -53,45 +37,81 @@
         </div>
     </div>
 
-    <div id="overlay" onclick="closeNav()"></div>
-
     <main>
         <section class="content-block">
-            <h2>Nos Cursus et Formations</h2>
-            <p>Découvrez les cursus conçus pour vous préparer aux métiers du numérique, du cycle préparatoire au diplôme d'ingénieur.</p>
-            <table class="formations-table">
-                <thead>
-                    <tr>
-                        <th>Niveau</th>
-                        <th>Diplôme / Cycle</th>
-                        <th>Principales compétences visées</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Post-Bac</td>
-                        <td>Cycle Préparatoire Intégré</td>
-                        <td>Bases scientifiques, Algorithmique, Projets</td>
-                    </tr>
-                    <tr>
-                        <td>Bac+3</td>
-                        <td>Bachelor (RNCP Niveau 6)</td>
-                        <td>Développement Web & Mobile, Cybersécurité, Data</td>
-                    </tr>
-                    <tr>
-                        <td>Bac+5</td>
-                        <td>Diplôme d'Ingénieur (Grade Master)</td>
-                        <td>Software Engineering, Big Data & IA, Réseaux</td>
-                    </tr>
-                </tbody>
-            </table>
+            <h2>Nos Cursus</h2>
+            <p>Cliquez sur une formation pour voir les détails.</p>
+                <h3>Cycle Prépa</h3>
+                <p>Post-Bac</p>            <div class="formation-grid">
+                <div class="card" onclick="openModal('prepa sci')">
+                    <li>Prépa scientifique <span class="plus-info">+ d'infos</span></li>
+                </div>
+                <div class="card" onclick="openModal('prepa bio')">
+                    <li>Prépa Bio et Numerique <span class="plus-info">+ d'infos</span></li>
+                    
+                </div>
+                <div class="card" onclick="openModal('prepa plus')">
+                    <li>Prépa PLUS <span class="plus-info">+ d'infos</span></li>
+                </div>
+            </div>
+            <h3>Cycle Bachelor</h3>
+            <p>Post-Bac+3</p>
+            <div class="formation-grid">
+                <div class="card" onclick="openModal('bachelor web')">
+                    <li>Bachelor Web & IA <span class="plus-info">+ d'infos</span></li>
+                </div>
+                <div class="card" onclick="openModal('bachelor cyber')">
+                    <li>Bachelor Cybersecurité & Réseau <span class="plus-info">+ d'infos</span></li>
+                </div>
+                <div class="card" onclick="openModal('bachelor info')">
+                    <li>Bachelor informatique <span class="plus-info">+ d'infos</span></li>
+                </div>
+                <div class="card" onclick="openModal('bachelor eth')">
+                    <li>Bachelor cybersécurité & ethical hacking <span class="plus-info">+ d'infos</span></li>
+                </div>
+            </div>
+            <h3>Cycle Ingénieur</h3>
+            <p>Bac+5</p>
+            <div class="formation-grid">
+                <div class="card" onclick="openModal('ingenieur')">
+                    <li><span class="plus-info">+ d'infos</span></li>
+                
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Efrei Paris - <a href="apropos.html">À propos de nous</a></p>
-    </footer>
-    <link rel="stylesheet" href="../css/style.css">
-<script src="../js/script.js"></script>
+    <div id="formationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">Fermer</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+
+<footer>
+    <img src="https://www.efrei.fr/wp-content/uploads/2025/08/dome.svg" alt="Dôme Efrei" class="footer-dome">
+
+    <div class="footer-container">
+        <div class="footer-column">
+            <p><strong>Contact Accueil :</strong></p>
+            <p>+33 188 289 000</p>
+        </div>
+        <div class="footer-column">
+            <p><strong>Campus Paris :</strong></p>
+            <p>30-32 Av. de la République, Villejuif</p>
+        </div>
+        <div class="footer-column">
+            <p><strong>Campus Bordeaux :</strong></p>
+            <p>83 Rue Lucien Faure, Bordeaux</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 - Département Informatique EFREI</p>
+    </div>
+</footer>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>

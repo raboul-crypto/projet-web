@@ -1,19 +1,27 @@
-/* Configuration Générale */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #02061b; /* Un gris clair et neutre */
     color: #333;
     line-height: 1.6;
+    background-image: url('../img/fond_de_site.jpg'); 
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-color: #02061b; 
+    display: flex;
+    flex-direction: column;
 }
-
-/* Header - Couleurs EFREI */
+html, body {
+    min-height: 100vh; 
+    margin: 0;
+    flex-direction: column;
+    display: flex;
+}
 header {
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+    background-image: url('../img/bande1.jpg'); 
+    background-repeat: no-repeat;
     background-color: rgb(22, 55, 103); /* Bleu marine profond */
     color: white;
     text-align: center;
@@ -26,7 +34,7 @@ header {
     text-transform: none;
 }
 
-/* Barre de Navigation Bleu Ciel */
+
 .main-nav {
     background-color: #729fcf; /* Bleu ciel de la maquette */
     padding: 10px 0;
@@ -53,11 +61,12 @@ header {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Blocs de contenu (Les cartes blanches) */
 main {
     max-width: 900px;
     margin: 30px auto;
     padding: 0 20px;
+    flex:1;
+    padding-bottom: 50px;
 }
 
 .content-block {
@@ -77,13 +86,11 @@ main {
     font-size: 1.4rem;
 }
 
-/* Filigrane (Dôme Panthéon) */
 .watermark {
     position: absolute;
     right: 20px;
     top: 20px;
-    width: 50px;
-    opacity: 0.1; /* Très discret */
+    width: 50px
 }
 
 /* Section Chiffres Clés & Campus */
@@ -158,37 +165,46 @@ main {
 .prev { left: 10px; }
 .next { right: 10px; }
 
-/* Footer */
 footer {
+    background-image: url('../img/bande1.jpg');
     background-color: rgb(22, 55, 103);
     color: white;
-    padding: 40px 20px;
+    padding: 15px 20px; 
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.footer-container {
+    display: flex; /* Aligne tes contacts sur une ligne */
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+    z-index: 2; /* Pour rester au-dessus du dôme */
+}
+
+.footer-column p {
+    margin: 5px 0;
+    font-size: 0.85rem; /* Texte plus discret */
+}
+
+.footer-dome {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    opacity: 0.2;
+    filter: brightness(0) invert(1); /* Force le dôme en blanc */
+    z-index: 1;
+}
+
+.footer-bottom {
     text-align: center;
-    margin-top: 50px;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-.footer-nav a {
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    text-decoration: none;
-    padding: 8px 15px;
-    margin-bottom: 10px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-.footer-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    margin-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 5px;
+    font-size: 0.75rem;
 }
 
 @media (max-width: 768px) {
@@ -255,4 +271,61 @@ h1 {
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+
+.formation-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    width: 280px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+.card:hover {
+    transform: scale(1.03); 
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    border-color: #163767;
+}
+
+.card h3 {
+    color: #163767;
+    margin-bottom: 10px;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 3000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7); 
+    display: none; 
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 500px;
+    text-align: center; 
+    color: #333;
+    position: relative;
+}
+.modal-header-center {
+    text-align: center; 
+    margin-bottom: 15px;
 }
