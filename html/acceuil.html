@@ -9,20 +9,27 @@
 </head>
 
 <body>
-<header style="background-color: rgb(22, 55, 103); display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
-    
-    <div style="width: 40px;"></div> 
+    <header
+        style="background-color: rgb(22, 55, 103); display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+        <a href="https://www.efrei.fr">
+            <div style="width: 150px;"> <img src="../img/image_efrei.png" alt="Logo EFREI"
+                    style="height: 40px; display: block;" href="https://www.efrei.fr"></div>
+        </a>
+        <div class="header-banner" style="flex: 1;">
+            <h1 style="color: white; margin: 0; text-align: center; font-size: 1.5rem;">Efrei - Département informatique
+            </h1>
+        </div>
+        <div id="openMenu" style="cursor: pointer; width: 150px; text-align: right; color: white; font-size: 30px;">
+            &#9776;
+        </div>
+    </header>
 
-    <div class="header-banner">
-        <h1 style="color: white; margin: 0; text-align: center; font-size: 1.5rem;">Efrei - Département informatique</h1>
-    </div>
-    <div id="openMenu" style="cursor: pointer; width: 40px; text-align: right;">&#9776;</div>
-</header>
-
-    <div id="mySidebar" class="sidebar">        <div class="sidebar-header">
+    <div id="mySidebar" class="sidebar">
+        <div class="sidebar-header">
             <h3 style="margin: 0; color: rgb(22, 55, 103) ;">Navigation</h3>
         </div>
         <div class="sidebar-menu">
+            <a href="acceuil.html">Accueil</a>
             <a href="cours_et_formation.html">Formation et cours</a>
             <a href="equipe_enseignante.html">Équipe</a>
             <a href="contact.html">Contacter nous</a>
@@ -35,73 +42,94 @@
     <div id="overlay" onclick="closeNav()"></div>
 
     <main>
+
+        <section class="content-block" id="bienvenue">
+            <div class="block-header">
+                <h2>Bienvenue sur le site du département Informatique de l'EFREI</h2>
+                <img src="../img/pantheon-icon.png" alt="" class="watermark">
+            </div>
+            <div class="news-container">
+                <article>
+                    <p>Fondée en 1936, l’Efrei n’a eu de cesse d’évoluer au fil des avancées technologiques. Elle est
+                        devenue l’école référente dans le numérique et compte désormais plus de 16 000 alumni. École
+                        composante du grand établissement Panthéon-Assas Université, nos diplômes sont reconnus en
+                        France et à l’international.</p>
+                </article>
+            </div>
+        </section>
+
         <section class="content-block" id="projets">
             <div class="block-header">
-                <h2>nos projet</h2>
+                <h2></h2>
                 <img src="../img/pantheon-icon.png" alt="" class="watermark">
             </div>
             <div class="carousel-container">
                 <div id="carousel">
-                    <img src="../img/gojo.jpg" alt="Projet 1" class="slide active">
-                    <img src="../img/Mao_Tse_Tung.jpg" alt="Projet 2" class="slide">
-                    <img src="../img/minh.jpg" alt="Projet 3" class="slide">
+                    <img src="../img/image_carrousel-1.jpg" alt="Projet 1" class="slide active">
+                    <img src="../img/image_carrousel-2.jpg" alt="Projet 2" class="slide">
+                    <img src="../img/image_carrousel-3.jpg" alt="Projet 3" class="slide">
+                    <img src="../img/image_carrousel-4.jpg" alt="Projet 4" class="slide">
+                    <img src="../img/image_carrousel-5.jpg" alt="Projet 5" class="slide">
                 </div>
-                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                <button class="prev" onclick="moveSlide(-1)">
+                    << /button>
+                        <button class="next" onclick="moveSlide(1)">></button>
             </div>
         </section>
 
         <section class="content-block" id="actualites">
             <div class="block-header">
-                <h2>actualités du département</h2>
+                <h2>Actualités du département</h2>
                 <img src="../img/pantheon-icon.png" alt="" class="watermark">
             </div>
             <div class="news-container">
                 <article>
                     <h3>Journée Portes Ouvertes</h3>
-                    <p><strong>Date :</strong> 15 Mars 2026. Venez découvrir nos laboratoires.</p>
+                    <p><strong>Date :</strong> 15 Mars 2026. Venez découvrir nos laboratoires et échanger avec les
+                        étudiants du département Informatique.</p>
                 </article>
                 <hr style="margin: 15px 0; border: 0; border-top: 1px solid #eee;">
                 <article>
                     <h3>Conférence Cybersécurité</h3>
-                    <p>Une conférence exceptionnelle sur les enjeux de l'IA.</p>
+                    <p>Une conférence exceptionnelle sur les enjeux de l'IA dans la sécurité numérique aura lieu
+                        prochainement dans l'amphithéatre principal</p>
                 </article>
             </div>
         </section>
 
         <section class="info-globale" style="display: flex; gap: 20px; justify-content: center; margin-bottom: 30px;">
-            <div class="stat-card" style="background: #1a3a61; color: white; padding: 20px; border-radius: 15px; flex: 1; text-align: center;">
+            <div class="stat-card"
+                style="background: #1a3a61; color: white; padding: 20px; border-radius: 15px; flex: 1; text-align: center;">
                 <h3>Chiffres Clés</h3>
                 <p>100% Numérique | 50+ Partenaires</p>
             </div>
-            <div class="campus-card" style="background: #1a3a61; color: white; padding: 20px; border-radius: 15px; flex: 1; text-align: center;">
-                <h3>Nos Campus</h3>
-                <p>Paris & Bordeaux</p>
-            </div>
         </section>
     </main>
+<footer style="background-color: rgb(22, 55, 103); color: white; padding: 40px 20px; margin-top: 50px; position: relative; overflow: hidden; min-height: 200px;">
+    
+    <img src="../img/image_ci.png" alt="Déco" style="position: absolute; top: 0; right: 0; height: 100%; width: auto; opacity: 0.4; pointer-events: none; object-fit: cover;">
 
-    <footer style="background-color: rgb(22, 55, 103); color: white; padding: 40px 20px;">
-        <div class="footer-container" style="display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
-            <div class="contact-acceuil">
-                <p><strong>Contact Accueil :</strong></p>
-                <p>+33 188 289 000</p>
-            </div>
-            <div class="campus-info">
-                <p><strong>Campus Paris :</strong></p>
-                <p>30-32 Av. de la République, 94800 Villejuif</p>
-            </div>
-            <div class="campus-info">
-                <p><strong>Campus Bordeaux :</strong></p>
-                <p>83 Rue Lucien Faure, 33000 Bordeaux</p>
-            </div>
+    <div class="footer-container" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px; max-width: 1000px; margin: 0 auto; text-align: center; position: relative; z-index: 2;">
+        <div class="footer-column" style="flex: 1; min-width: 200px;">
+            <p><strong>Contact Accueil :</strong></p>
+            <p>+33 188 289 000</p>
         </div>
-        <div style="text-align: center; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
-            <a href="apropos.html" style="color: #fff;">À propos de nous</a>
-            <p>&copy; 2026 - Département Informatique EFREI</p>
+        <div class="footer-column" style="flex: 1; min-width: 200px;">
+            <p><strong>Campus Paris :</strong></p>
+            <p>30-32 Av. de la République,<br>94800 Villejuif</p>
         </div>
-    </footer>
+        <div class="footer-column" style="flex: 1; min-width: 200px;">
+            <p><strong>Campus Bordeaux :</strong></p>
+            <p>83 Rue Lucien Faure,<br>33000 Bordeaux</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; position: relative; z-index: 2;">
+        <p>&copy; 2026 - Département Informatique EFREI</p>
+    </div>
+</footer>
 
     <script src="../js/script.js"></script>
 </body>
+
 </html>

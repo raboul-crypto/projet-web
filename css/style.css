@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #EAECEE; /* Un gris clair et neutre */
+    background-color: #02061b; /* Un gris clair et neutre */
     color: #333;
     line-height: 1.6;
 }
@@ -255,8 +255,4 @@ h1 {
     text-align: center;
     justify-content: center;
     align-items: center;
-}
-#openMenu img {
-    background-color: transparent !important; /* Force la transparence */
-    border: none; /* Enlève une éventuelle bordure */
 }
