@@ -93,7 +93,6 @@ main {
     width: 50px
 }
 
-/* Section Chiffres Clés & Campus */
 .info-globale {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -275,26 +274,34 @@ h1 {
 
 .formation-grid {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
     margin-top: 25px;
 }
 
 .card {
     background-color: white;
-    border-radius: 12px;
-    padding: 25px;
-    width: 280px;
+    border: 1px solid #163767;
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
     text-align: center;
     cursor: pointer;
     border: 1px solid #ddd;
 }
-
+.card li {
+    list-style: none;     
+    text-align: center;    
+    padding: 0;
+    margin:  0;
+}
 .card:hover {
     transform: scale(1.03); 
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-    border-color: #163767;
+    border-color: #729fcf;
 }
 
 .card h3 {
@@ -311,16 +318,19 @@ h1 {
     width: 100%; 
     height: 100%;
     background-color: rgba(0,0,0,0.7); 
+    display: none;
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
     background-color: white;
-    padding: 30px;
+    padding: 40px;
     border-radius: 15px;
     width: 90%;
     max-width: 500px;
+    text-align: center;
+
     color: #333;
     position: relative;
 }
@@ -358,4 +368,15 @@ h1 {
     cursor: pointer;
     font-weight: bold;
     color: #1a3a61;
+}
+.prof-name {
+    font-weight: bold;
+    color: #163767;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.prof-desc {
+    color: #333;
+    margin: 0;
 }

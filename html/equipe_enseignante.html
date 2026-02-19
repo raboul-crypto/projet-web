@@ -1,30 +1,49 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Équipe - Département Informatique EFREI</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .team-list { list-style-type: none; padding-left: 0; }
-        .team-list li { background-color: #f9fafb; border: 1px solid #e7e7e7; border-radius: 8px; padding: 15px; margin-bottom: 15px; }
-        .team-list strong { color: #0d2c4a; }
+        .team-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .team-list li {
+            background-color: #f9fafb;
+            border: 1px solid #e7e7e7;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .team-list strong {
+            color: #0d2c4a;
+        }
     </style>
 </head>
-<body>
-<header style="background-color: rgb(22, 55, 103); display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
-    <a href="https://www.efrei.fr">
-    <div style="width: 150px;"> <img src="../img/image_efrei.png" alt="Logo EFREI" style="height: 40px; display: block;"href="https://www.efrei.fr"></div>
-    </a>
-    <div class="header-banner" style="flex: 1;">
-        <h1 style="color: white; margin: 0; text-align: center; font-size: 1.5rem;">Efrei - Département informatique</h1>
-    </div>
-    <div id="openMenu" style="cursor: pointer; width: 150px; text-align: right; color: white; font-size: 30px;">
-        &#9776;
-    </div>
-</header>
 
-    <div id="mySidebar" class="sidebar">        <div class="sidebar-header">
+<body>
+    <header
+        style="background-color: rgb(22, 55, 103); display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+        <a href="https://www.efrei.fr">
+            <div style="width: 150px;"> <img src="../img/image_efrei.png" alt="Logo EFREI"
+                    style="height: 40px; display: block;" href="https://www.efrei.fr"></div>
+        </a>
+        <div class="header-banner" style="flex: 1;">
+            <h1 style="color: white; margin: 0; text-align: center; font-size: 1.5rem;">Efrei - Département informatique
+            </h1>
+        </div>
+        <div id="openMenu" style="cursor: pointer; width: 150px; text-align: right; color: white; font-size: 30px;">
+            &#9776;
+        </div>
+    </header>
+
+    <div id="mySidebar" class="sidebar">
+        <div class="sidebar-header">
             <h3 style="margin: 0; color: rgb(22, 55, 103) ;">Navigation</h3>
         </div>
         <div class="sidebar-menu">
@@ -41,41 +60,53 @@
     <div id="overlay" onclick="closeNav()"></div>
 
     <main>
-        <section class="content-block">
+        <section class="content-block center-content">
             <h2>Notre Équipe Pédagogique</h2>
-            <p>Une équipe d'enseignants-chercheurs et d'intervenants professionnels passionnés, au service de la réussite de nos étudiants.</p>
-            <ul class="team-list">
-                <li><strong>M. Jean Dupont</strong> - Directeur du département, Expert en Intelligence Artificielle</li>
-                <li><strong>Mme. Aline Martin</strong> - Responsable du cycle Bachelor, Spécialiste en Développement Web</li>
-                <li><strong>M. Paul Durand</strong> - Coordinateur des projets, Expert en Cybersécurité</li>
-                <li><strong>Mme. Sophie Leroy</strong> - Enseignante-chercheuse en Big Data & Cloud Computing</li>
-            </ul>
+            <p>Une équipe d'enseignants-chercheurs et d'intervenants passionnés.</p>
+
+            <div class="formation-grid">
+                <div class="card">
+                    <p class="prof-name">M. Jean Dupont</p>
+                    <p class="prof-desc">Directeur du département, Expert en IA</p>
+                </div>
+
+                <div class="card">
+                    <p class="prof-name">Mme. Aline Martin</p>
+                    <p class="prof-desc">Responsable Bachelor, Spécialiste Web</p>
+                </div>
+
+                <div class="card">
+                    <p class="prof-name">M. Paul Durand</p>
+                    <p class="prof-desc">Coordinateur des projets, Expert Cyber</p>
+                </div>
+            </div>
         </section>
     </main>
 
-<footer>
-    <img src="https://www.efrei.fr/wp-content/uploads/2025/08/dome.svg" alt="Dôme Efrei" class="footer-dome">
+    <footer>
+        <img src="https://www.efrei.fr/wp-content/uploads/2025/08/dome.svg" alt="Dôme Efrei" class="footer-dome">
 
-    <div class="footer-container">
-        <div class="footer-column">
-            <p><strong>Contact Accueil :</strong></p>
-            <p>+33 188 289 000</p>
+        <div class="footer-container">
+            <div class="footer-column">
+                <p><strong>Contact Accueil :</strong></p>
+                <p>+33 188 289 000</p>
+            </div>
+            <div class="footer-column">
+                <p><strong>Campus Paris :</strong></p>
+                <p>30-32 Av. de la République, Villejuif</p>
+            </div>
+            <div class="footer-column">
+                <p><strong>Campus Bordeaux :</strong></p>
+                <p>83 Rue Lucien Faure, Bordeaux</p>
+            </div>
         </div>
-        <div class="footer-column">
-            <p><strong>Campus Paris :</strong></p>
-            <p>30-32 Av. de la République, Villejuif</p>
-        </div>
-        <div class="footer-column">
-            <p><strong>Campus Bordeaux :</strong></p>
-            <p>83 Rue Lucien Faure, Bordeaux</p>
-        </div>
-    </div>
 
-    <div class="footer-bottom">
-        <p>&copy; 2026 - Département Informatique EFREI</p>
-    </div>
-</footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 - Département Informatique EFREI</p>
+        </div>
+    </footer>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/script.js"></script>
 </body>
+
 </html>
