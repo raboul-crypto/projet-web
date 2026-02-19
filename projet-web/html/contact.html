@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Département Informatique EFREI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f9;
+            margin: 0;
+            color: #333;
+        }
+
+        /* --- STYLES DU MENU LATÉRAL (SIDEBAR) --- */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            right: 0;
+            background-color: white;
+            overflow-x: hidden;
+            transition: 0.4s;
+            padding-top: 60px;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        }
+
+        .sidebar h2 { padding: 0 32px; color: #163767; }
+
+        .sidebar a {
+            padding: 15px 32px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            color: #163767;
+            display: block;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+            cursor: pointer;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+
+        /* --- DESIGN CONTACT --- */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: 40px auto;
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .card { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        .form-section { flex: 2; min-width: 350px; }
+        .info-section { flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 20px; }
+
+        .contact-form h2 { color: #163767; margin-top: 0; display: flex; align-items: center; gap: 10px; }
+        .contact-form label { display: block; margin: 15px 0 5px; font-size: 0.9rem; color: #666; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #e0e0e0; box-sizing: border-box; font-family: inherit; }
+
+        .btn-send { background-color: #2563eb; color: white; width: 100%; padding: 15px; border: none; border-radius: 10px; cursor: pointer; font-size: 1rem; font-weight: bold; margin-top: 20px; }
+
+        .info-card { background: white; border-radius: 15px; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 15px; }
+        .icon-circle { background: #e0e7ff; color: #2563eb; width: 45px; height: 45px; border-radius: 12px; display: flex; justify-content: center; align-items: center; font-size: 20px; }
+        .hours-card { background: #2563eb; color: white; border-radius: 15px; padding: 25px; }
+
+        footer { background-color: #0f172a; color: white; padding: 40px 20px; margin-top: 50px; }
+        .footer-grid { display: flex; justify-content: space-around; max-width: 1100px; margin: 0 auto; flex-wrap: wrap; gap: 20px; }
+    </style>
+</head>
+
+<body>
+
+<div id="mySidebar" class="sidebar">
+    <span class="closebtn" onclick="closeNav()">&times;</span>
+    <h2>Navigation</h2>
+    <a href="acceuil.html">Accueil</a>
+    <a href="cours_et_formation.html">Formation et cours</a>
+    <a href="equipe_enseignante.html">Équipe</a>
+    <a href="contact.html">Contacter nous</a>
+    <a href="apropos.html">A propos de nous</a>
+    <a href="#">Fermer</a>
+</div>
+<div id="overlay" class="overlay" onclick="closeNav()"></div>
+
+<header style="background-color: rgb(22, 55, 103); display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <a href="https://www.efrei.fr">
+    <div style="width: 150px;"> <img src="../img/image_efrei.png" alt="Logo EFREI" style="height: 40px; display: block;"href="https://www.efrei.fr"></div>
+    </a>
+    <div class="header-banner" style="flex: 1;">
+        <h1 style="color: white; margin: 0; text-align: center; font-size: 1.5rem;">Efrei - Département informatique</h1>
+    </div>
+    <div id="openMenu" style="cursor: pointer; width: 150px; text-align: right; color: white; font-size: 30px;">
+        &#9776;
+    </div>
+</header>
+
+
+<main class="contact-container">
+    <section class="form-section card">
+        <div class="contact-form">
+            <h2>✉️ Contactez nous</h2>
+            <form action="https://formspree.io/f/ton_identifiant_ici" method="POST"> 
+                <label for="full-name">Nom</label>
+                <input type="text" id="full-name" name="name" placeholder="Votre nom" required>
+
+                <label for="email-address">Adresse mail</label>
+                <input type="email" id="email-address" name="email" placeholder="votre.email@exemple.com" required>
+
+                <label for="user-message">Message</label>
+                <textarea id="user-message" name="message" rows="6" placeholder="Votre message..." required></textarea>
+
+                <button type="submit" class="btn-send">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <aside class="info-section">
+        <div class="info-card">
+            <div class="icon-circle">📞</div>
+            <div>
+                <div style="font-weight: bold;">Contact Accueil</div>
+                <div style="color: #666;">+33 188 289 000</div>
+            </div>
+        </div>
+        <div class="info-card">
+            <div class="icon-circle">📍</div>
+            <div>
+                <div style="font-weight: bold;">Campus Paris</div>
+                <div style="color: #666; font-size: 0.9rem;">30-32 Av. de la République, Villejuif</div>
+            </div>
+        </div>
+        <div class="hours-card">
+            <h3 style="margin-top:0">Horaires d'ouverture</h3>
+            <p>Lundi - Vendredi : 8h00 - 19h00</p>
+            <p>Samedi : 9h00 - 13h00</p>
+        </div>
+    </aside>
+</main>
+
+<footer>
+    <div class="footer-grid">
+        <div><p><strong>Contact Accueil</strong></p><p>+33 188 289 000</p></div>
+        <div><p><strong>Campus Paris</strong></p><p>30-32 Av. de la République, Villejuif</p></div>
+        <div><p><strong>Campus Bordeaux</strong></p><p>83 Rue Lucien Faure, Bordeaux</p></div>
+    </div>
+    <div style="text-align: center; margin-top: 30px; opacity: 0.6; font-size: 0.8rem;">
+        &copy; 2026 - Département Informatique EFREI
+    </div>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
