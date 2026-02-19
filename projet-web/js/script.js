@@ -1,24 +1,19 @@
-// On initialise l'index
+// --- VARIABLES POUR L'EASTER EGG ---
+let secretCount = 0;
+let lastClickTime = 0;
+
+// --- GESTION DU CARROUSEL ---
 let currentSlide = 0;
 
-// Fonction principale de mouvement
 function moveSlide(step) {
     const slides = document.querySelectorAll('.slide');
-    
-    // Sécurité : on vérifie qu'il y a bien des images
     if (slides.length === 0) return;
 
-    // On retire la classe active de l'image actuelle
     slides[currentSlide].classList.remove('active');
-
-    // On calcule l'index suivant
     currentSlide = (currentSlide + step + slides.length) % slides.length;
-
-    // On ajoute la classe active à la nouvelle image
     slides[currentSlide].classList.add('active');
 }
 
-// On attache la fonction à l'objet window pour que le onclick du HTML la voie
 window.moveSlide = moveSlide;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -36,19 +31,52 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// --- GESTION DU MENU (SIDEBAR) + SECRET ---
 function openNav() {
-    document.getElementById("mySidebar").style.width = "300px"; // Ouvre à 300px
-    document.getElementById("overlay").style.display = "block"; // Affiche le voile
+    const now = Date.now();
+    
+    if (now - lastClickTime > 2000) {
+        secretCount = 0;
+    }
+    
+    secretCount++;
+    lastClickTime = now;
+
+    if (secretCount === 5) {
+        secretCount = 0;
+        
+        // On récupère le nom de la page actuelle
+        const currentPage = window.location.pathname.split("/").pop();
+
+        if (currentPage === "index.html" || currentPage === "") {
+            // Si on est sur l'accueil
+            window.location.href = "page_secrete_acceuil.html";
+        } else {
+            // Si on est sur contact ou ailleurs
+            window.location.href = "page_secrete_contact.html";
+        }
+        return; 
+    }
+
+    document.getElementById("mySidebar").style.width = "300px";
+    document.getElementById("overlay").style.display = "block";
 }
 
 function closeNav() {
-    document.getElementById("mySidebar").style.width = "0"; // Referme
-    document.getElementById("overlay").style.display = "none"; // Cache le voile
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("overlay").style.display = "none";
 }
 
-document.getElementById("openMenu").onclick = openNav;
+// On lie le clic sur l'icône à la fonction
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById("openMenu");
+    if (menuBtn) {
+        menuBtn.onclick = openNav;
+    }
+});
 
-
+// --- GESTION DES MODALES FORMATIONS ---
 function openModal(type) {
     let titre = "";
     let diplome = "";
@@ -95,23 +123,28 @@ function openModal(type) {
         texte = "Cette année de tronc commun se compose d’un semestre à l’international et d’un semestre de cours à Paris.";
     }
 
-    document.getElementById('modalBody').innerHTML = `
-        <div class="modal-header-center">
-            <h2 class="modal-titre">${titre}</h2>
-            <p class="modal-diplome">${diplome}</p>
-        </div>
-        <hr class="modal-separator">
-        <div class="modal-text">
-            <p>${texte}</p>
-        </div>
-    `;
-
-    document.getElementById('formationModal').style.display = "flex";
+    const modalBody = document.getElementById('modalBody');
+    if (modalBody) {
+        modalBody.innerHTML = `
+            <div class="modal-header-center">
+                <h2 class="modal-titre">${titre}</h2>
+                <p class="modal-diplome">${diplome}</p>
+            </div>
+            <hr class="modal-separator">
+            <div class="modal-text">
+                <p>${texte}</p>
+            </div>
+        `;
+        document.getElementById('formationModal').style.display = "flex";
+    }
 }
+
 function closeModal() {
-    document.getElementById('formationModal').style.display = "none";
+    const modal = document.getElementById('formationModal');
+    if (modal) modal.style.display = "none";
 }
 
+// Fermeture au clic à l'extérieur
 window.onclick = function(event) {
     let modal = document.getElementById('formationModal');
     if (event.target == modal) { closeModal(); }
