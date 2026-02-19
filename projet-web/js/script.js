@@ -40,7 +40,7 @@ function openNav() {
  
     if (secretCount === 5) {
         secretCount = 0;
-        
+
         // On récupère le nom de la page actuelle
         const path = window.location.pathname;
         const currentPage = path.split("/").pop();
