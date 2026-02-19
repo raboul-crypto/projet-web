@@ -1,12 +1,30 @@
+:root {
+    /* Palette Rouge / Bordeaux (Basée sur l'existant) */
+    --primary-color: #970d0d;   /* Rouge profond (Header, Titres) */
+    --secondary-color: #5a0808; /* Bordeaux sombre (Stats, Footer) */
+    --accent-color: #c0392b;    /* Rouge vif (Boutons, Liens, Survol) */
+    --neutral-bg: #f4f6f8;      /* Gris clair (Fond de page) */
+    --text-dark: #333333;
+    --text-light: #ffffff;
+
+    /* UI & Espacements */
+    --spacing-md: 20px;
+    --spacing-lg: 40px;
+    --border-radius: 12px;
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-    color: #333;
+    color: var(--text-dark);
+    font-family: var(--font-main);
     line-height: 1.6;
     background-image: url('../img/back.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #02061b;
+    background-color: var(--neutral-bg);
     display: flex;
     flex-direction: column;
 }
@@ -26,11 +44,41 @@ header {
     background-image: url('../img/bande.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: rgb(22, 55, 103);
-    /* Bleu marine profond */
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-light);
     text-align: center;
     padding: 20px 0 0 0;
+}
+
+/* Classes pour le Header modernisé */
+.main-header {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.header-logo-container {
+    width: 150px;
+}
+
+.header-logo {
+    height: 40px; 
+    display: block;
+}
+
+.header-banner {
+    flex: 1;
+}
+
+.header-title {
+    color: var(--text-light);
+    margin: 0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .header-banner h1 {
@@ -39,10 +87,8 @@ header {
     text-transform: none;
 }
 
-
 .main-nav {
-    background-color: #729fcf;
-    /* Bleu ciel de la maquette */
+    background-color: var(--accent-color);
     padding: 10px 0;
 }
 
@@ -54,7 +100,7 @@ header {
 }
 
 .main-nav a {
-    color: white;
+    color: var(--text-light);
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
@@ -65,6 +111,20 @@ header {
 
 .main-nav a:hover {
     background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Menu Burger */
+.menu-btn {
+    cursor: pointer;
+    width: 150px;
+    text-align: right;
+    color: var(--text-light);
+    font-size: 30px;
+    transition: color 0.3s ease;
+}
+
+.menu-btn:hover {
+    color: var(--accent-color);
 }
 
 main {
@@ -78,15 +138,23 @@ main {
 .content-block {
     background: white;
     border: 1px solid #ddd;
-    border-radius: 15px;
+    border-radius: var(--border-radius);
     padding: 30px;
     margin-bottom: 30px;
     position: relative;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-card);
+}
+
+.block-header h2 {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-top: 0;
 }
 
 .content-block h2 {
-    color: #1a3a61;
+    color: var(--primary-color);
     text-align: center;
     margin-bottom: 20px;
     font-size: 1.4rem;
@@ -108,13 +176,25 @@ main {
 
 .stat-card,
 .campus-card {
-    background: #1a3a61;
-    color: white;
-    padding: 20px;
-    border-radius: 15px;
+    background: var(--secondary-color);
+    color: var(--text-light);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
     text-align: center;
+    box-shadow: var(--shadow-card);
 }
 
+.stat-card h3 {
+    color: var(--accent-color);
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.separator {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
 
 .carousel-container {
     position: relative;
@@ -158,8 +238,7 @@ main {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(22, 55, 103, 0.7);
-    /* Ton bleu marine en transparent */
+    background-color: rgba(151, 13, 13, 0.7); /* Rouge transparent */
     color: white;
     border: none;
     cursor: pointer;
@@ -172,7 +251,7 @@ main {
 
 .prev:hover,
 .next:hover {
-    background-color: rgb(22, 55, 103);
+    background-color: var(--primary-color);
 }
 
 .prev {
@@ -188,8 +267,8 @@ footer {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: rgb(22, 55, 103);
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
     padding: 15px 20px;
     margin-top: 30px;
     position: relative;
@@ -249,14 +328,15 @@ footer {
     padding: 15px 20px;
     text-decoration: none;
     font-size: 18px;
-    color: #1a3a61;
+    color: var(--primary-color);
     display: block;
     border-bottom: 1px solid #f1f1f1;
     transition: 0.3s;
 }
 
 .sidebar-menu a:hover {
-    background-color: #729fcf;
+    background-color: var(--accent-color);
+    color: white;
 }
 
 main {
@@ -284,14 +364,14 @@ main {
 
 .sidebar h2 {
     padding: 0 32px;
-    color: #163767;
+    color: var(--primary-color);
 }
 
 .sidebar a {
     padding: 15px 32px;
     text-decoration: none;
     font-size: 1.1rem;
-    color: #163767;
+    color: var(--primary-color);
     display: block;
     border-bottom: 1px solid #f0f0f0;
 }
@@ -316,7 +396,7 @@ main {
 }
 
 h1 {
-    color: white;
+    color: var(--text-light);
     margin: 0;
     text-align: center;
     justify-content: center;
@@ -333,7 +413,7 @@ h1 {
 
 .card {
     background-color: white;
-    border: 1px solid #163767;
+    border: 1px solid var(--primary-color);
     border-radius: 15px;
     padding: 30px;
     width: 90%;
@@ -354,11 +434,11 @@ h1 {
 .card:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    border-color: #729fcf;
+    border-color: var(--accent-color);
 }
 
 .card h3 {
-    color: #163767;
+    color: var(--primary-color);
     margin-bottom: 10px;
 }
 
@@ -380,12 +460,12 @@ h1 {
 }
 
 .modal-titre {
-    color: #1a3a61;
+    color: var(--primary-color);
     margin: 0;
 }
 
 .modal-diplome {
-    color: #729fcf;
+    color: var(--accent-color);
     font-weight: bold;
     margin-top: 5px;
 }
@@ -407,7 +487,7 @@ h1 {
     right: 15px;
     cursor: pointer;
     font-weight: bold;
-    color: #1a3a61;
+    color: var(--primary-color);
 }
 
 .equipe-grid {
@@ -429,7 +509,7 @@ h1 {
 }
 
 .prof-card-header {
-    background-color: #970d0d;
+    background-color: var(--primary-color);
     height: 120px;
     position: relative;
     display: flex;
@@ -465,7 +545,7 @@ h1 {
 }
 
 .prof-card-body .role {
-    color: #8a2323;
+    color: var(--accent-color);
     font-weight: bold;
     margin: 5px 0 15px 0;
 }
@@ -514,7 +594,7 @@ h1 {
 }
 
 .contact-form h2 {
-    color: #163767;
+    color: var(--primary-color);
     margin-top: 0;
     display: flex;
     align-items: center;
@@ -539,8 +619,8 @@ h1 {
 }
 
 .btn-send {
-    background-color: #2563eb;
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--text-light);
     width: 100%;
     padding: 15px;
     border: none;
@@ -563,7 +643,7 @@ h1 {
 
 .icon-circle {
     background: #e0e7ff;
-    color: #2563eb;
+    color: var(--accent-color);
     width: 45px;
     height: 45px;
     border-radius: 12px;
@@ -574,8 +654,8 @@ h1 {
 }
 
 .hours-card {
-    background: #2563eb;
-    color: white;
+    background: var(--primary-color);
+    color: var(--text-light);
     border-radius: 15px;
     padding: 25px;
 }

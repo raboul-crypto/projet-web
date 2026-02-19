@@ -9,17 +9,16 @@
 </head>
 
 <body>
-    <header
-        style="background-color: rgb(22, 55, 103); display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <header class="main-header">
         <a href="https://www.efrei.fr">
-            <div style="width: 150px;"> <img src="../img/image_efrei.png" alt="Logo EFREI"
-                    style="height: 40px; display: block;" href="https://www.efrei.fr"></div>
+            <div class="header-logo-container"> <img src="../img/image_efrei.png" alt="Logo EFREI"
+                    class="header-logo" href="https://www.efrei.fr"></div>
         </a>
-        <div class="header-banner" style="flex: 1;">
-            <h1 style="color: white; margin: 0; text-align: center; font-size: 1.5rem;">Efrei - Département informatique
+        <div class="header-banner">
+            <h1 class="header-title">Efrei - Département informatique
             </h1>
         </div>
-        <div id="openMenu" style="cursor: pointer; width: 150px; text-align: right; color: white; font-size: 30px;">
+        <div id="openMenu" class="menu-btn">
             &#9776;
         </div>
     </header>
@@ -67,13 +66,9 @@
                     <img src="../img/image_carrousel-4.jpg" alt="Projet 4" class="slide">
                     <img src="../img/image_carrousel-5.jpg" alt="Projet 5" class="slide">
                 </div>
-<<<<<<< HEAD
-                <button class="prev" onclick="moveSlide(-1)">
-                    << /button>
-=======
+
                 <button class="prev" onclick="moveSlide(-1)"></button>
->>>>>>> da9829bb8ae87a61177c5474e32aced3c7ab9b50
-                        <button class="next" onclick="moveSlide(1)">></button>
+                <button class="next" onclick="moveSlide(1)">></button>
             </div>
         </section>
 
@@ -88,7 +83,7 @@
                     <p><strong>Date :</strong> 15 Mars 2026. Venez découvrir nos laboratoires et échanger avec les
                         étudiants du département Informatique.</p>
                 </article>
-                <hr style="margin: 15px 0; border: 0; border-top: 1px solid #eee;">
+                <hr class="separator">
                 <article>
                     <h3>Conférence Cybersécurité</h3>
                     <p>Une conférence exceptionnelle sur les enjeux de l'IA dans la sécurité numérique aura lieu
@@ -97,9 +92,8 @@
             </div>
         </section>
 
-        <section class="info-globale" style="display: flex; gap: 20px; justify-content: center; margin-bottom: 30px;">
-            <div class="stat-card"
-                style="background: #1a3a61; color: white; padding: 20px; border-radius: 15px; flex: 1; text-align: center;">
+        <section class="info-globale">
+            <div class="stat-card">
                 <h3>Chiffres Clés</h3>
                 <p>16000 alumnis | 6000 étudiants | 2000 entreprises partenaire | 150 intervenants </p>
             </div>

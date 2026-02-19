@@ -1,24 +1,24 @@
 let secretCount = 0;
 let lastClickTime = 0;
-
+ 
 let currentSlide = 0;
-
+ 
 function moveSlide(step) {
     const slides = document.querySelectorAll('.slide');
     if (slides.length === 0) return;
-
+ 
     slides[currentSlide].classList.remove('active');
     currentSlide = (currentSlide + step + slides.length) % slides.length;
     slides[currentSlide].classList.add('active');
 }
-
+ 
 window.moveSlide = moveSlide;
-
+ 
 document.addEventListener('DOMContentLoaded', () => {
     let autoPlay = setInterval(() => {
         moveSlide(1);
     }, 5000);
-
+ 
     const buttons = document.querySelectorAll('.prev, .next');
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -27,35 +27,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
+ 
 function openNav() {
     const now = Date.now();
-    
+   
     if (now - lastClickTime > 2000) {
         secretCount = 0;
     }
-    
+   
     secretCount++;
     lastClickTime = now;
-
+ 
     if (secretCount === 5) {
         secretCount = 0;
-        
-<<<<<<< HEAD
-        const currentPage = window.location.pathname.split("/").pop();
-
-        if (currentPage === "index.html" || currentPage === "") {
-            window.location.href = "page_secrete_acceuil.html";
-        } else {
-            window.location.href = "page_secrete_contact.html";
-=======
+       
+ 
         // On récupère le nom de la page actuelle
         const path = window.location.pathname;
         const currentPage = path.split("/").pop();
-
+ 
         if (currentPage === "acceuil.html" || currentPage === "") {
             window.location.href = "page_secrete_acceuil.html";
-        } 
+        }
         else if (currentPage === "cours_et_formation.html") {
             window.location.href = "secret_formation.html"; // La nouvelle page !
         }
@@ -64,37 +57,36 @@ function openNav() {
         }
         else {
             window.location.href = "page_secrete_contact.html"; // Celle de contact
->>>>>>> da9829bb8ae87a61177c5474e32aced3c7ab9b50
         }
-        return; 
+        return;
     }
-
+ 
     document.getElementById("mySidebar").style.width = "300px";
     document.getElementById("overlay").style.display = "block";
 }
-
+ 
 function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("overlay").style.display = "none";
 }
-
+ 
 document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.getElementById("openMenu");
     if (menuBtn) {
         menuBtn.onclick = openNav;
     }
 });
-
+ 
 function openModal(type) {
     let titre = "";
     let diplome = "";
     let texte = "";
-
+ 
     if(type === 'prepa sci') {
         titre = "Prépa Scientifique";
         diplome = "Post-Bac";
         texte = "Ce cycle en deux ans prépare nos étudiants en combinant formation scientifique et technique avec une formation générale et professionnelle de l'ingénieur.";
-    } 
+    }
     else if(type === 'prepa bio') {
         titre = "Prépa Bio et Numérique";
         diplome = "Post-Bac";
@@ -130,7 +122,7 @@ function openModal(type) {
         diplome = "Bac+5";
         texte = "Cette année de tronc commun se compose d’un semestre à l’international et d’un semestre de cours à Paris.";
     }
-
+ 
     const modalBody = document.getElementById('modalBody');
     if (modalBody) {
         modalBody.innerHTML = `
@@ -146,12 +138,12 @@ function openModal(type) {
         document.getElementById('formationModal').style.display = "flex";
     }
 }
-
+ 
 function closeModal() {
     const modal = document.getElementById('formationModal');
     if (modal) modal.style.display = "none";
 }
-
+ 
 window.onclick = function(event) {
     let modal = document.getElementById('formationModal');
     if (event.target == modal) { closeModal(); }
