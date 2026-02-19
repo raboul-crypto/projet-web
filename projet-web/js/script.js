@@ -47,14 +47,20 @@ function openNav() {
         secretCount = 0;
         
         // On récupère le nom de la page actuelle
-        const currentPage = window.location.pathname.split("/").pop();
+        const path = window.location.pathname;
+        const currentPage = path.split("/").pop();
 
-        if (currentPage === "index.html" || currentPage === "") {
-            // Si on est sur l'accueil
+        if (currentPage === "acceuil.html" || currentPage === "") {
             window.location.href = "page_secrete_acceuil.html";
-        } else {
-            // Si on est sur contact ou ailleurs
-            window.location.href = "page_secrete_contact.html";
+        } 
+        else if (currentPage === "cours_et_formation.html") {
+            window.location.href = "secret_formation.html"; // La nouvelle page !
+        }
+        else if (currentPage === "equipe_enseignante.html") {
+            window.location.href = "secret_equipe.html"; // La nouvelle page !
+        }
+        else {
+            window.location.href = "page_secrete_contact.html"; // Celle de contact
         }
         return; 
     }
