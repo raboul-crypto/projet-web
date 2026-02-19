@@ -290,7 +290,6 @@ h1 {
     transition: transform 0.3s ease;
     text-align: center;
     cursor: pointer;
-    border: 1px solid #ddd;
 }
 .card li {
     list-style: none;     
@@ -308,21 +307,6 @@ h1 {
     color: #163767;
     margin-bottom: 10px;
 }
-
-.modal {
-    display: none; 
-    position: fixed;
-    z-index: 3000;
-    left: 0; 
-    top: 0;
-    width: 100%; 
-    height: 100%;
-    background-color: rgba(0,0,0,0.7); 
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
 .modal-content {
     background-color: white;
     padding: 40px;
@@ -369,14 +353,80 @@ h1 {
     font-weight: bold;
     color: #1a3a61;
 }
-.prof-name {
-    font-weight: bold;
-    color: #163767;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+.equipe-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding:20px;
 }
 
-.prof-desc {
-    color: #333;
+.prof-card {
+    width: 320px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.prof-card-header {
+    background-color: #2563eb; 
+    height: 120px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.photo-wrapper {
+    position: absolute;
+    bottom: -50px; 
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px; 
+}
+
+.photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.prof-card-body {
+    padding: 60px 20px 20px 20px; 
+    text-align: left; 
+}
+
+.prof-card-body h3 {
     margin: 0;
+    color: #111;
+    font-size: 1.2rem;
+}
+
+.prof-card-body .role {
+    color: #2563eb;
+    font-weight: bold;
+    margin: 5px 0 15px 0;
+}
+
+
+.prof-card-bottom h3 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 1.4rem;
+}
+.prof-diplomes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.prof-diplomes li {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
 }
