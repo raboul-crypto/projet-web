@@ -6,48 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Département Informatique EFREI</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .contact-form label {
-            display: block;
-            margin: 15px 0 5px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .contact-form input[type="text"],
-        .contact-form input[type="email"],
-        .contact-form textarea {
-            width: 100%;
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-            transition: border-color 0.2s;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            border-color: #729fcf;
-        }
-
-        .contact-form button {
-            background-color: #729fcf;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: background-color 0.2s;
-        }
-
-        .contact-form button:hover {
-            background-color: #5a8cc2;
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -83,27 +42,66 @@
 
     <div id="overlay" onclick="closeNav()"></div>
 
-    <main>
-        <section class="content-block">
-            <h2>Nous Contacter</h2>
-            <p>Pour toute question, demande d'information ou partenariat, veuillez remplir le formulaire ci-dessous.</p>
-            <form action="#" method="POST" class="contact-form">
-                <label for="name">Nom complet</label>
-                <input type="text" id="name" name="name" required>
+<main style="max-width: 1200px; margin: 40px auto; display: flex; gap: 30px; padding: 20px; align-items: stretch; font-family: sans-serif;">
+    
+    <section style="flex: 2.5; background: white; padding: 50px; border-radius: 25px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+        <h2 style="color: #002b5c; margin-top: 0; display: flex; align-items: center; gap: 15px; font-size: 2rem;">
+            <span style="font-size: 1.2em;">✉️</span> Contactez nous
+        </h2>
+        
+        <form action="#" method="POST">
+            <label style="display: block; margin: 25px 0 10px; font-weight: bold; color: #333; font-size: 1.1rem;">Nom</label>
+            <input type="text" placeholder="Votre nom" style="width: 100%; padding: 15px; border-radius: 12px; border: 1px solid #ddd; box-sizing: border-box; font-size: 1rem;">
 
-                <label for="email">Adresse Email</label>
-                <input type="email" id="email" name="email" required>
+            <label style="display: block; margin: 25px 0 10px; font-weight: bold; color: #333; font-size: 1.1rem;">Adresse mail</label>
+            <input type="email" placeholder="votre.email@exemple.com" style="width: 100%; padding: 15px; border-radius: 12px; border: 1px solid #ddd; box-sizing: border-box; font-size: 1rem;">
 
-                <label for="subject">Objet de votre message</label>
-                <input type="text" id="subject" name="subject" required>
+            <label style="display: block; margin: 25px 0 10px; font-weight: bold; color: #333; font-size: 1.1rem;">Message</label>
+            <textarea rows="7" placeholder="Votre message..." style="width: 100%; padding: 15px; border-radius: 12px; border: 1px solid #ddd; box-sizing: border-box; resize: vertical; font-size: 1rem;"></textarea>
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6" required></textarea>
+            <button type="submit" style="width: 100%; background-color: #d32f2f; color: white; padding: 18px; border: none; border-radius: 12px; font-weight: bold; font-size: 1.1rem; margin-top: 35px; cursor: pointer; transition: background 0.3s;">
+                Envoyer <span style="margin-left: 10px;">➤</span>
+            </button>
+        </form>
+    </section>
 
-                <button type="submit">Envoyer</button>
-            </form>
-        </section>
-    </main>
+    <aside style="flex: 1; display: flex; flex-direction: column; gap: 20px;">
+        
+        <div style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 15px;">
+            <div style="background: #ffebee; color: #d32f2f; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">📞</div>
+            <div>
+                <h4 style="margin: 0; color: #002b5c;">Contact Accueil</h4>
+                <p style="margin: 5px 0 0; color: #666; font-size: 0.9rem;">+33 188 289 000</p>
+            </div>
+        </div>
+
+        <div style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 15px;">
+            <div style="background: #ffebee; color: #d32f2f; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">📍</div>
+            <div>
+                <h4 style="margin: 0; color: #002b5c;">Campus Paris</h4>
+                <p style="margin: 5px 0 0; color: #666; font-size: 0.9rem;">30-32 Av. de la République</p>
+            </div>
+        </div>
+
+        <div style="background: white; padding: 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 15px;">
+            <div style="background: #ffebee; color: #d32f2f; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">📍</div>
+            <div>
+                <h4 style="margin: 0; color: #002b5c;">Campus Bordeaux</h4>
+                <p style="margin: 5px 0 0; color: #666; font-size: 0.9rem;">83 Rue Lucien Faure</p>
+            </div>
+        </div>
+
+        <div style="background: #d32f2f; color: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(211, 47, 47, 0.4); flex-grow: 1;">
+            <h4 style="margin: 0 0 20px 0; font-size: 1.3rem;">Horaires d'ouverture</h4>
+            <div style="font-size: 1rem; line-height: 1.8;">
+                <p style="margin: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 5px;">Lundi - Vendredi : 8h00 - 18h00</p>
+                <p style="margin: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 5px;">Samedi : 9h00 - 12h00</p>
+                <p style="margin: 8px 0;">Dimanche : Fermé</p>
+            </div>
+        </div>
+
+    </aside>
+</main>
     <footer>
         <img src="https://www.efrei.fr/wp-content/uploads/2025/08/dome.svg" alt="Dôme Efrei" class="footer-dome">
 
