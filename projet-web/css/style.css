@@ -1,20 +1,29 @@
 :root {
-    /* Palette Rouge / Bordeaux (Basée sur l'existant) */
-    --primary-color: #970d0d;   /* Rouge profond (Header, Titres) */
-    --secondary-color: #5a0808; /* Bordeaux sombre (Stats, Footer) */
-    --accent-color: #c0392b;    /* Rouge vif (Boutons, Liens, Survol) */
-    --neutral-bg: #f4f6f8;      /* Gris clair (Fond de page) */
-    --text-dark: #333333;
+    --primary-color: #970d0d;
+    --secondary-color: #5a0808;
+    --accent-color: #c0392b;
+    --neutral-bg: #f4f6f8;
+    --text-main: #333333;
     --text-light: #ffffff;
+    --card-bg: #ffffff;
+    --border-color: #dddddd;
 
-    /* UI & Espacements */
     --spacing-md: 20px;
     --spacing-lg: 40px;
     --border-radius: 12px;
     --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.1);
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+[data-theme="dark"] {
+    --neutral-bg: #0f172a; 
+    --card-bg: #1e293b;    
+    --text-main: #f1f5f9; 
+    --border-color: #334155;
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.5);
+    
+    --primary-color: #ef4444; 
+    --accent-color: #f87171;
+}
 body {
     color: var(--text-dark);
     font-family: var(--font-main);
@@ -28,9 +37,12 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-html,
-body {
+.content-block, .card, .prof-card {
+    background-color: var(--card-bg);
+    color: var(--text-main);
+    border-color: var(--border-color);
+}
+html,body {
     min-height: 100vh;
     margin: 0;
     flex-direction: column;
@@ -671,3 +683,4 @@ h1 {
     border-radius: 15px;
     padding: 25px;
 }
+
