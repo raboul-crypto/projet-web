@@ -43,21 +43,16 @@
     </header>
 
     <div id="mySidebar" class="sidebar">
-        <div class="sidebar-header">
-            <h3 style="margin: 0; color: rgb(22, 55, 103) ;">Navigation</h3>
-        </div>
-        <div class="sidebar-menu">
-            <a href="acceuil.html">Accueil</a>
-            <a href="cours_et_formation.html">Formation et cours</a>
-            <a href="equipe_enseignante.html">Équipe</a>
-            <a href="contact.html">Contacter nous</a>
-            <a href="apropos.html">À propos de nous</a>
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">Fermer</a>
-
-        </div>
+        <span class="closebtn" onclick="closeNav()">&times;</span>
+        <h2>Navigation</h2>
+        <a href="acceuil.html">Accueil</a>
+        <a href="cours_et_formation.html">Formation et cours</a>
+        <a href="equipe_enseignante.html">Équipe</a>
+        <a href="contact.html">Contacter nous</a>
+        <a href="apropos.html">A propos de nous</a>
+        <a href="#">Fermer</a>
     </div>
 
-    <div id="overlay" onclick="closeNav()"></div>
 
     <main>
         <section class="content-block center-content">
@@ -148,6 +143,7 @@
             <p>&copy; 2026 - Département Informatique EFREI</p>
         </div>
     </footer>
+    <div id="overlay" class="overlay" onclick="closeNav()"></div>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/script.js"></script>
 </body>
