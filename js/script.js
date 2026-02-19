@@ -50,15 +50,50 @@ document.getElementById("openMenu").onclick = openNav;
 
 
 function openModal(type) {
+    let titre = "";
+    let diplome = "";
     let texte = "";
-    if(type === 'prepa sci') texte = "Ce cycle en deux ans prépare nos étudiants en combinant formation scientifique et technique avec une formation générale et professionnelle de l'ingénieur";
-    if(type === 'prepa bio') texte = "Cette prépa s'adresse aux étudiants intéressés par la biologie, lasanté et les sciences du numérique.";
-    if(type === 'prepa plus') texte = "La Prépa PLUS est une passerelle vers le cycle ingénieur de l’Efrei. Grâce à un parcours renforcé en mathématiques et physique, vous intégrez l’école avec toutes les clés pour réussir votre formation d’ingénieur.";
-    if(type === 'bachelor web') texte = "Les étudiants du Bachelor Développeur web & IA apprennent à programmer et à développer des applications (back-end, front-end) et maîtrisent les outils d’IA.";
-    if(type === 'bachelor cyber') texte = "Cette formation prépare les étudiants à concevoir et déployer des stratégies de sécurité des systèmes d’information qui préviennent efficacement les menaces cyber et y répondent de manière adaptée.";
-    if(type === 'bachelor info') texte = "Le Bachelor Informatique de l’Efrei forme des développeurs polyvalents capable d’opérer aussi bien en tant que Fullstack, DevOps, Back End ou Front End. Ses diplômés peuvent travailler aussi bien au sein d’une association que d’une grande ESN";
-    if(type === 'bachelor eth') texte = "Nos diplômés maîtrisent les compétences clés de la cybersécurité dans une approche orientée vers l’entreprise. Formés aux tests d’intrusion avec une forte dimension éthique, ils développent également une expertise en sécurité logicielle.";
-    if(type === 'ingenieur') texte = "Cette année de tronc commun se compose d’un semestre à l’international dans le cadre de la mobilité étudiante et d’un semestre de cours à Paris. À son issue, les élèves peuvent choisir une des 13 majeures proposées au sein des 4 filières de l’école en vue de se spécialiser dans un domaine précis du numérique.";
+
+    if(type === 'prepa sci') {
+        titre = "Prépa Scientifique";
+        diplome = "Post-Bac";
+        texte = "Ce cycle en deux ans prépare nos étudiants en combinant formation scientifique et technique avec une formation générale et professionnelle de l'ingénieur.";
+    } 
+    else if(type === 'prepa bio') {
+        titre = "Prépa Bio et Numérique";
+        diplome = "Post-Bac";
+        texte = "Cette prépa s'adresse aux étudiants intéressés par la biologie, la santé et les sciences du numérique.";
+    }
+    else if(type === 'prepa plus') {
+        titre = "Prépa PLUS";
+        diplome = "Post-Bac";
+        texte = "La Prépa PLUS est une passerelle vers le cycle ingénieur de l’Efrei grâce à un parcours renforcé en mathématiques et physique.";
+    }
+    else if(type === 'bachelor web') {
+        titre = "Bachelor Web & IA";
+        diplome = "Post-Bac+3";
+        texte = "Les étudiants apprennent à programmer et à développer des applications et maîtrisent les outils d’IA.";
+    }
+    else if(type === 'bachelor cyber') {
+        titre = "Bachelor Cybersécurité & Réseau";
+        diplome = "Post-Bac+3";
+        texte = "Cette formation prépare les étudiants à concevoir et déployer des stratégies de sécurité des systèmes d’information.";
+    }
+    else if(type === 'bachelor info') {
+        titre = "Bachelor Informatique";
+        diplome = "Post-Bac+3";
+        texte = "Forme des développeurs polyvalents capables d'opérer en Fullstack, DevOps, Back End ou Front End.";
+    }
+    else if(type === 'bachelor eth') {
+        titre = "Ethical Hacking";
+        diplome = "Post-Bac+3";
+        texte = "Maîtrise des compétences clés de la cybersécurité avec une approche orientée vers l’entreprise et les tests d'intrusion.";
+    }
+    else if(type === 'ingenieur') {
+        titre = "Diplôme d'Ingénieur";
+        diplome = "Bac+5";
+        texte = "Cette année de tronc commun se compose d’un semestre à l’international et d’un semestre de cours à Paris.";
+    }
 
     document.getElementById('modalBody').innerHTML = `
         <div class="modal-header-center">
@@ -70,9 +105,9 @@ function openModal(type) {
             <p>${texte}</p>
         </div>
     `;
-    document.getElementById('formationModal').style.display = "block";
-}
 
+    document.getElementById('formationModal').style.display = "flex";
+}
 function closeModal() {
     document.getElementById('formationModal').style.display = "none";
 }
