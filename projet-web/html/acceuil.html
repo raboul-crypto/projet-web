@@ -25,18 +25,14 @@
     </header>
 
     <div id="mySidebar" class="sidebar">
-        <div class="sidebar-header">
-            <h3 style="margin: 0; color: rgb(22, 55, 103) ;">Navigation</h3>
-        </div>
-        <div class="sidebar-menu">
-            <a href="acceuil.html">Accueil</a>
-            <a href="cours_et_formation.html">Formation et cours</a>
-            <a href="equipe_enseignante.html">Équipe</a>
-            <a href="contact.html">Contacter nous</a>
-            <a href="apropos.html">À propos de nous</a>
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">Fermer</a>
-
-        </div>
+        <span class="closebtn" onclick="closeNav()">&times;</span>
+        <h2>Navigation</h2>
+        <a href="acceuil.html">Accueil</a>
+        <a href="cours_et_formation.html">Formation et cours</a>
+        <a href="equipe_enseignante.html">Équipe</a>
+        <a href="contact.html">Contacter nous</a>
+        <a href="apropos.html">A propos de nous</a>
+        <a href="#">Fermer</a>
     </div>
 
     <div id="overlay" onclick="closeNav()"></div>
@@ -71,7 +67,8 @@
                     <img src="../img/image_carrousel-4.jpg" alt="Projet 4" class="slide">
                     <img src="../img/image_carrousel-5.jpg" alt="Projet 5" class="slide">
                 </div>
-                <button class="prev" onclick="moveSlide(-1)"><</button>
+                <button class="prev" onclick="moveSlide(-1)">
+                    << /button>
                         <button class="next" onclick="moveSlide(1)">></button>
             </div>
         </section>
@@ -104,28 +101,28 @@
             </div>
         </section>
     </main>
-<footer>
-    <img src="https://www.efrei.fr/wp-content/uploads/2025/08/dome.svg" alt="Dôme Efrei" class="footer-dome">
+    <footer>
+        <img src="https://www.efrei.fr/wp-content/uploads/2025/08/dome.svg" alt="Dôme Efrei" class="footer-dome">
 
-    <div class="footer-container">
-        <div class="footer-column">
-            <p><strong>Contact Accueil :</strong></p>
-            <p>+33 188 289 000</p>
+        <div class="footer-container">
+            <div class="footer-column">
+                <p><strong>Contact Accueil :</strong></p>
+                <p>+33 188 289 000</p>
+            </div>
+            <div class="footer-column">
+                <p><strong>Campus Paris :</strong></p>
+                <p>30-32 Av. de la République, Villejuif</p>
+            </div>
+            <div class="footer-column">
+                <p><strong>Campus Bordeaux :</strong></p>
+                <p>83 Rue Lucien Faure, Bordeaux</p>
+            </div>
         </div>
-        <div class="footer-column">
-            <p><strong>Campus Paris :</strong></p>
-            <p>30-32 Av. de la République, Villejuif</p>
-        </div>
-        <div class="footer-column">
-            <p><strong>Campus Bordeaux :</strong></p>
-            <p>83 Rue Lucien Faure, Bordeaux</p>
-        </div>
-    </div>
 
-    <div class="footer-bottom">
-        <p>&copy; 2026 - Département Informatique EFREI</p>
-    </div>
-</footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 - Département Informatique EFREI</p>
+        </div>
+    </footer>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/script.js"></script>
 </body>

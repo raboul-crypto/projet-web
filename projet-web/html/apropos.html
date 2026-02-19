@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À Propos - Projet Site Vitrine EFREI</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<header style="background-color: rgb(22, 55, 103); display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
-    <a href="https://www.efrei.fr">
-    <div style="width: 150px;"> <img src="../img/image_efrei.png" alt="Logo EFREI" style="height: 40px; display: block;"href="https://www.efrei.fr"></div>
-    </a>
-    <div class="header-banner" style="flex: 1;">
-        <h1 style="color: white; margin: 0; text-align: center; font-size: 1.5rem;">Efrei - Département informatique</h1>
-    </div>
-    <div id="openMenu" style="cursor: pointer; width: 150px; text-align: right; color: white; font-size: 30px;">
-        &#9776;
-    </div>
-</header>
-
-    <div id="mySidebar" class="sidebar">        <div class="sidebar-header">
-            <h3 style="margin: 0; color: rgb(22, 55, 103) ;">Navigation</h3>
+    <header
+        style="background-color: rgb(22, 55, 103); display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+        <a href="https://www.efrei.fr">
+            <div style="width: 150px;"> <img src="../img/image_efrei.png" alt="Logo EFREI"
+                    style="height: 40px; display: block;" href="https://www.efrei.fr"></div>
+        </a>
+        <div class="header-banner" style="flex: 1;">
+            <h1 style="color: white; margin: 0; text-align: center; font-size: 1.5rem;">Efrei - Département informatique
+            </h1>
         </div>
-        <div class="sidebar-menu">
-            <a href="acceuil.html">Accueil</a>
-            <a href="cours_et_formation.html">Formation et cours</a>
-            <a href="equipe_enseignante.html">Équipe</a>
-            <a href="contact.html">Contacter nous</a>
-            <a href="apropos.html">À propos de nous</a>
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">Fermer</a>
-
+        <div id="openMenu" style="cursor: pointer; width: 150px; text-align: right; color: white; font-size: 30px;">
+            &#9776;
         </div>
+    </header>
+
+    <div id="mySidebar" class="sidebar">
+        <span class="closebtn" onclick="closeNav()">&times;</span>
+        <h2>Navigation</h2>
+        <a href="acceuil.html">Accueil</a>
+        <a href="cours_et_formation.html">Formation et cours</a>
+        <a href="equipe_enseignante.html">Équipe</a>
+        <a href="contact.html">Contacter nous</a>
+        <a href="apropos.html">A propos de nous</a>
+        <a href="#">Fermer</a>
     </div>
 
     <div id="overlay" onclick="closeNav()"></div>
@@ -38,8 +40,9 @@
     <main>
         <section class="content-block">
             <h2>À Propos de ce Projet</h2>
-            <p>Ce site web est un projet étudiant réalisé dans le cadre de notre formation à l'Efrei Paris. Il a pour but de mettre en pratique nos compétences en développement web front-end et back-end.</p>
-            
+            <p>Ce site web est un projet étudiant réalisé dans le cadre de notre formation à l'Efrei Paris. Il a pour
+                but de mettre en pratique nos compétences en développement web front-end et back-end.</p>
+
             <h3>Membres du Groupe :</h3>
             <ul>
                 <li>BEN ABDELAZIZ Rabah</li>
@@ -48,29 +51,30 @@
         </section>
     </main>
 
-<footer>
-    <img src="https://www.efrei.fr/wp-content/uploads/2025/08/dome.svg" alt="Dôme Efrei" class="footer-dome">
+    <footer>
+        <img src="https://www.efrei.fr/wp-content/uploads/2025/08/dome.svg" alt="Dôme Efrei" class="footer-dome">
 
-    <div class="footer-container">
-        <div class="footer-column">
-            <p><strong>Contact Accueil :</strong></p>
-            <p>+33 188 289 000</p>
+        <div class="footer-container">
+            <div class="footer-column">
+                <p><strong>Contact Accueil :</strong></p>
+                <p>+33 188 289 000</p>
+            </div>
+            <div class="footer-column">
+                <p><strong>Campus Paris :</strong></p>
+                <p>30-32 Av. de la République, Villejuif</p>
+            </div>
+            <div class="footer-column">
+                <p><strong>Campus Bordeaux :</strong></p>
+                <p>83 Rue Lucien Faure, Bordeaux</p>
+            </div>
         </div>
-        <div class="footer-column">
-            <p><strong>Campus Paris :</strong></p>
-            <p>30-32 Av. de la République, Villejuif</p>
-        </div>
-        <div class="footer-column">
-            <p><strong>Campus Bordeaux :</strong></p>
-            <p>83 Rue Lucien Faure, Bordeaux</p>
-        </div>
-    </div>
 
-    <div class="footer-bottom">
-        <p>&copy; 2026 - Département Informatique EFREI</p>
-    </div>
-</footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 - Département Informatique EFREI</p>
+        </div>
+    </footer>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/script.js"></script>
 </body>
+
 </html>

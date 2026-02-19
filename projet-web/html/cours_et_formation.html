@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formations - Efrei</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
 
     <header
@@ -23,32 +25,29 @@
         </div>
     </header>
 
-    <div id="mySidebar" class="sidebar">        <div class="sidebar-header">
-            <h3 style="margin: 0; color: rgb(22, 55, 103) ;">Navigation</h3>
-        </div>
-        <div class="sidebar-menu">
-            <a href="acceuil.html">Accueil</a>
-            <a href="cours_et_formation.html">Formation et cours</a>
-            <a href="equipe_enseignante.html">Équipe</a>
-            <a href="contact.html">Contacter nous</a>
-            <a href="apropos.html">À propos de nous</a>
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">Fermer</a>
-
-        </div>
+    <div id="mySidebar" class="sidebar">
+        <span class="closebtn" onclick="closeNav()">&times;</span>
+        <h2>Navigation</h2>
+        <a href="acceuil.html">Accueil</a>
+        <a href="cours_et_formation.html">Formation et cours</a>
+        <a href="equipe_enseignante.html">Équipe</a>
+        <a href="contact.html">Contacter nous</a>
+        <a href="apropos.html">A propos de nous</a>
+        <a href="#">Fermer</a>
     </div>
 
     <main>
         <section class="content-block">
             <h2>Nos Cursus</h2>
             <p>Cliquez sur une formation pour voir les détails.</p>
-                <h3>Cycle Prépa</h3>
-                <div class="formation-grid">
+            <h3>Cycle Prépa</h3>
+            <div class="formation-grid">
                 <div class="card" onclick="openModal('prepa sci')">
                     <li>Prépa scientifique <span class="plus-info">+ d'infos</span></li>
                 </div>
                 <div class="card" onclick="openModal('prepa bio')">
                     <li>Prépa Bio et Numerique <span class="plus-info">+ d'infos</span></li>
-                    
+
                 </div>
                 <div class="card" onclick="openModal('prepa plus')">
                     <li>Prépa PLUS <span class="plus-info">+ d'infos</span></li>
@@ -73,7 +72,7 @@
             <div class="formation-grid">
                 <div class="card" onclick="openModal('ingenieur')">
                     <li><span class="plus-info">Ingénieur</span></li>
-                
+
                 </div>
             </div>
         </section>
@@ -87,27 +86,28 @@
     </div>
 
 
-<footer>
-    <img src="https://www.efrei.fr/wp-content/uploads/2025/08/dome.svg" alt="Dôme Efrei" class="footer-dome">
-    <div class="footer-container">
-        <div class="footer-column">
-            <p><strong>Contact Accueil :</strong></p>
-            <p>+33 188 289 000</p>
+    <footer>
+        <img src="https://www.efrei.fr/wp-content/uploads/2025/08/dome.svg" alt="Dôme Efrei" class="footer-dome">
+        <div class="footer-container">
+            <div class="footer-column">
+                <p><strong>Contact Accueil :</strong></p>
+                <p>+33 188 289 000</p>
+            </div>
+            <div class="footer-column">
+                <p><strong>Campus Paris :</strong></p>
+                <p>30-32 Av. de la République, Villejuif</p>
+            </div>
+            <div class="footer-column">
+                <p><strong>Campus Bordeaux :</strong></p>
+                <p>83 Rue Lucien Faure, Bordeaux</p>
+            </div>
         </div>
-        <div class="footer-column">
-            <p><strong>Campus Paris :</strong></p>
-            <p>30-32 Av. de la République, Villejuif</p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 - Département Informatique EFREI</p>
         </div>
-        <div class="footer-column">
-            <p><strong>Campus Bordeaux :</strong></p>
-            <p>83 Rue Lucien Faure, Bordeaux</p>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2026 - Département Informatique EFREI</p>
-    </div>
-</footer>
+    </footer>
 
     <script src="../js/script.js"></script>
 </body>
+
 </html>

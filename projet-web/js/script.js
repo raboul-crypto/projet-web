@@ -1,8 +1,6 @@
-// --- VARIABLES POUR L'EASTER EGG ---
 let secretCount = 0;
 let lastClickTime = 0;
 
-// --- GESTION DU CARROUSEL ---
 let currentSlide = 0;
 
 function moveSlide(step) {
@@ -17,12 +15,10 @@ function moveSlide(step) {
 window.moveSlide = moveSlide;
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Défilement automatique toutes les 5 secondes
     let autoPlay = setInterval(() => {
         moveSlide(1);
     }, 5000);
 
-    // 2. Gestion de l'arrêt au clic sur les flèches
     const buttons = document.querySelectorAll('.prev, .next');
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -32,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// --- GESTION DU MENU (SIDEBAR) + SECRET ---
 function openNav() {
     const now = Date.now();
     
@@ -46,14 +41,11 @@ function openNav() {
     if (secretCount === 5) {
         secretCount = 0;
         
-        // On récupère le nom de la page actuelle
         const currentPage = window.location.pathname.split("/").pop();
 
         if (currentPage === "index.html" || currentPage === "") {
-            // Si on est sur l'accueil
             window.location.href = "page_secrete_acceuil.html";
         } else {
-            // Si on est sur contact ou ailleurs
             window.location.href = "page_secrete_contact.html";
         }
         return; 
@@ -68,7 +60,6 @@ function closeNav() {
     document.getElementById("overlay").style.display = "none";
 }
 
-// On lie le clic sur l'icône à la fonction
 document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.getElementById("openMenu");
     if (menuBtn) {
@@ -76,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// --- GESTION DES MODALES FORMATIONS ---
 function openModal(type) {
     let titre = "";
     let diplome = "";
@@ -144,7 +134,6 @@ function closeModal() {
     if (modal) modal.style.display = "none";
 }
 
-// Fermeture au clic à l'extérieur
 window.onclick = function(event) {
     let modal = document.getElementById('formationModal');
     if (event.target == modal) { closeModal(); }
