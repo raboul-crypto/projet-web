@@ -41,14 +41,7 @@ function openNav() {
     if (secretCount === 5) {
         secretCount = 0;
         
-<<<<<<< HEAD
-        const currentPage = window.location.pathname.split("/").pop();
 
-        if (currentPage === "index.html" || currentPage === "") {
-            window.location.href = "page_secrete_acceuil.html";
-        } else {
-            window.location.href = "page_secrete_contact.html";
-=======
         // On récupère le nom de la page actuelle
         const path = window.location.pathname;
         const currentPage = path.split("/").pop();
@@ -64,7 +57,6 @@ function openNav() {
         }
         else {
             window.location.href = "page_secrete_contact.html"; // Celle de contact
->>>>>>> da9829bb8ae87a61177c5474e32aced3c7ab9b50
         }
         return; 
     }
