@@ -147,3 +147,24 @@ window.onclick = function(event) {
     let modal = document.getElementById('formationModal');
     if (event.target == modal) { closeModal(); }
 }
+
+
+const themeBtn = document.getElementById('theme-toggle'); // Vérifie que ton bouton a bien cet ID
+const htmlElement = document.documentElement;
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme) {
+    htmlElement.setAttribute('data-theme', savedTheme);
+    themeBtn.innerText = savedTheme === 'dark' ? '☀️' : '🌙';
+}
+
+themeBtn.addEventListener('click', () => {
+    let currentTheme = htmlElement.getAttribute('data-theme');
+    let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+    htmlElement.setAttribute('data-theme', newTheme);
+
+    localStorage.setItem('theme', newTheme);
+
+    themeBtn.innerText = newTheme === 'dark' ? '☀️' : '🌙';
+});
