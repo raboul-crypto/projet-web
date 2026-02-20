@@ -49,17 +49,7 @@
     border: 1px solid #555 !important;
 }
 [data-theme="dark"] {
-<<<<<<< HEAD
-    --neutral-bg: #0f172a; 
-    --card-bg: #1e293b;    
-    --text-main: #f1f5f9; 
-    --border-color: #334155;
-    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.5);
-    
-    --primary-color: #ef4444; 
-    --accent-color: #f87171;
-=======
->>>>>>> c86accde16f0a02098f65054e9ab271033825013
+
     --card-bg: rgba(30, 30, 30, 0.95);
     --text-main: #ffffff;            
     --primary-color: #ff4d4d;

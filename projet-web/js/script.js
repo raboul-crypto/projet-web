@@ -163,11 +163,6 @@ themeBtn.addEventListener('click', () => {
     let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
     htmlElement.setAttribute('data-theme', newTheme);
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> c86accde16f0a02098f65054e9ab271033825013
     localStorage.setItem('theme', newTheme);
 
     themeBtn.innerText = newTheme === 'dark' ? '☀️' : '🌙';
