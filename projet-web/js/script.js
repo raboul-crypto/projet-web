@@ -41,7 +41,6 @@ function openNav() {
     if (secretCount === 5) {
         secretCount = 0;
 
-        // On récupère le nom de la page actuelle
         const path = window.location.pathname;
         const currentPage = path.split("/").pop();
  
@@ -49,13 +48,13 @@ function openNav() {
             window.location.href = "page_secrete_acceuil.html";
         }
         else if (currentPage === "cours_et_formation.html") {
-            window.location.href = "secret_formation.html"; // La nouvelle page !
+            window.location.href = "secret_formation.html"; 
         }
         else if (currentPage === "equipe_enseignante.html") {
-            window.location.href = "secret_equipe.html"; // La nouvelle page !
+            window.location.href = "secret_equipe.html"; 
         }
         else {
-            window.location.href = "page_secrete_contact.html"; // Celle de contact
+            window.location.href = "page_secrete_contact.html"; 
         }
         return;
     }
@@ -155,7 +154,7 @@ const savedTheme = localStorage.getItem('theme');
 
 if (savedTheme) {
     htmlElement.setAttribute('data-theme', savedTheme);
-    themeBtn.innerText = savedTheme === 'dark' ? '☀️' : '🌙';
+    themeBtn.innerText = savedTheme === 'dark' ? '🌕' : '🌑';
 }
 
 themeBtn.addEventListener('click', () => {
@@ -169,20 +168,20 @@ themeBtn.addEventListener('click', () => {
 });
 
 const timelineSteps = [
-    { year: "1936", title: "Création de l'EFR", text: "L'école EFR est créée à Paris par Ernest Lavigne pour répondre aux besoins en radioélectricité.", img: "../img/efrei_1936.png" },
+    { year: "1936", title: "Création de l'EFR", text: "L'école EFR est créée à Paris par Ernest Lavigne pour répondre aux besoins en radioélectricité.", img: "img/efrei_1936.png" },
     { year: "1945", title: "L'EFR est reconnue par l'État", text: "L'école franchit une étape majeure en obtenant la reconnaissance officielle de l'État." },
-    { year: "1957", title: "Certification CTI", text: "L'EFR est habilitée à délivrer le titre d'ingénieur et crée sa classe préparatoire intégrée.", img: "../img/efrei_1957.png" },
+    { year: "1957", title: "Certification CTI", text: "L'EFR est habilitée à délivrer le titre d'ingénieur et crée sa classe préparatoire intégrée.", img: "img/efrei_1957.png" },
     { year: "1970", title: "L'EFR devient EFREI", text: "L'école intègre l'électronique et affirme son positionnement dans les nouvelles technologies." },
-    { year: "1973", title: "Informatique & Automatique", text: "L'Efrei s'adapte à la révolution numérique en intégrant l'informatique.", img: "../img/efrei_1973.png" },
-    { year: "1985", title: "Création de la SEPEFREI", text: "Lancement de la Junior-Entreprise pour favoriser l'expérience professionnelle.", img: "../img/efrei_1985.png" },
-    { year: "1987", title: "Campus de Villejuif", text: "Inauguration du nouveau campus pour répondre à la croissance des effectifs.", img: "../img/efrei_1987.jpg" },
-    { year: "2010", title: "Incubateur Efrei Entrepreneurs", text: "Un lieu dédié aux projets innovants des étudiants et des startups.", img: "../img/efrei_2010.png" },
-    { year: "2012", title: "Efrei Research Lab", text: "La recherche devient un pilier de l'école pour nourrir les formations.", img: "../img/efrei_2012.png" },
-    { year: "2015", title: "Label EESPIG", text: "Reconnaissance d'Établissement d'Enseignement Supérieur Privé d'Intérêt Général.", img: "../img/efrei_2015.png" },
-    { year: "2018", title: "Student Hub", text: "Inauguration d'un espace de 600m² dédié à la vie étudiante et associative.", img: "../img/efrei_2018.png" },
-    { year: "2020", title: "Campus de Bordeaux", text: "Ouverture d'un second campus pour étendre l'offre de formation.", img: "../img/efrei_2020.png" },
+    { year: "1973", title: "Informatique & Automatique", text: "L'Efrei s'adapte à la révolution numérique en intégrant l'informatique.", img: "img/efrei_1973.png" },
+    { year: "1985", title: "Création de la SEPEFREI", text: "Lancement de la Junior-Entreprise pour favoriser l'expérience professionnelle.", img: "img/efrei_1985.png" },
+    { year: "1987", title: "Campus de Villejuif", text: "Inauguration du nouveau campus pour répondre à la croissance des effectifs.", img: "img/efrei_1987.jpg" },
+    { year: "2010", title: "Incubateur Efrei Entrepreneurs", text: "Un lieu dédié aux projets innovants des étudiants et des startups.", img: "img/efrei_2010.png" },
+    { year: "2012", title: "Efrei Research Lab", text: "La recherche devient un pilier de l'école pour nourrir les formations.", img: "img/efrei_2012.png" },
+    { year: "2015", title: "Label EESPIG", text: "Reconnaissance d'Établissement d'Enseignement Supérieur Privé d'Intérêt Général.", img: "img/efrei_2015.png" },
+    { year: "2018", title: "Student Hub", text: "Inauguration d'un espace de 600m² dédié à la vie étudiante et associative.", img: "img/efrei_2018.png" },
+    { year: "2020", title: "Campus de Bordeaux", text: "Ouverture d'un second campus pour étendre l'offre de formation.", img: "img/efrei_2020.png" },
     { year: "2021", title: "Ouverture du site Gorki à Villejuif", text: "Un nouveau site pour renforcer la présence de l'école au cœur de Villejuif." },
-    { year: "2021", title: "L'Efrei intègre le Campus Cyber", text: "L'école rejoint le Campus Cyber pour renforcer son expertise en cybersécurité.", img:"../img/efrei_2021.png" }
+    { year: "2021", title: "L'Efrei intègre le Campus Cyber", text: "L'école rejoint le Campus Cyber pour renforcer son expertise en cybersécurité.", img: "img/efrei_2021.png" }
 ];
 
 let currentIndex = 0;
@@ -203,22 +202,19 @@ function changeTimeline(direction) {
 
         const step = timelineSteps[currentIndex];
         
-        // Mise à jour des textes
         document.getElementById('display-year').innerText = step.year;
         document.getElementById('display-title').innerText = step.title;
         document.getElementById('display-text').innerText = step.text;
 
-        // --- GESTION DE L'IMAGE ---
         if (step.img && step.img.trim() !== "") {
             imgElement.src = step.img;
-            imgContainer.style.display = "block"; // On montre le bloc image
-            imgElement.style.opacity = 1;         // On lance le fondu
+            imgContainer.style.display = "block"; 
+            imgElement.style.opacity = 1;      
         } else {
             imgElement.src = ""; 
-            imgContainer.style.display = "none";  // On cache complètement le bloc
+            imgContainer.style.display = "none";  
         }
 
-        // Effet de réapparition du texte
         dataContainer.style.opacity = 1;
     }, 400); 
 }
