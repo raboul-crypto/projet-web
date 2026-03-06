@@ -83,6 +83,10 @@
 [data-theme="dark"] .prof-diplomes li {
     color: #cccccc;
 }
+
+[data-theme="dark"] a {
+    color: white !important;
+}
 body {
     color: var(--text-dark);
     font-family: var(--font-main);
