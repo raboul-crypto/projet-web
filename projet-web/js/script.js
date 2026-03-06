@@ -188,33 +188,37 @@ let currentIndex = 0;
 
 function changeTimeline(direction) {
     const dataContainer = document.getElementById('timeline-data');
-    const imgElement = document.getElementById('display-img');
-    const imgContainer = document.querySelector('.history-image-container');
+    const imgElement = document.getElementById('display-img'); // Peut être nul
+    const imgContainer = document.querySelector('.history-image-container'); // Peut être nul
 
-    // Effet de disparition (début de l'animation)
-    dataContainer.style.opacity = 0;
-    imgElement.style.opacity = 0;
+    // Effet de disparition
+    if (dataContainer) dataContainer.style.opacity = 0;
+    if (imgElement) imgElement.style.opacity = 0;
 
     setTimeout(() => {
+        // Calcul du nouvel index
         currentIndex += direction;
         if (currentIndex >= timelineSteps.length) currentIndex = 0;
         if (currentIndex < 0) currentIndex = timelineSteps.length - 1;
 
         const step = timelineSteps[currentIndex];
         
+        // Mise à jour du texte (Vérifie bien que ces IDs existent dans ton HTML)
         document.getElementById('display-year').innerText = step.year;
         document.getElementById('display-title').innerText = step.title;
         document.getElementById('display-text').innerText = step.text;
 
-        if (step.img && step.img.trim() !== "") {
-            imgElement.src = step.img;
-            imgContainer.style.display = "block"; 
-            imgElement.style.opacity = 1;      
-        } else {
-            imgElement.src = ""; 
-            imgContainer.style.display = "none";  
+        // Mise à jour de l'image SEULEMENT si les éléments existent dans le HTML
+        if (imgElement && imgContainer) {
+            if (step.img && step.img.trim() !== "") {
+                imgElement.src = step.img;
+                imgContainer.style.display = "block"; 
+                imgElement.style.opacity = 1;      
+            } else {
+                imgContainer.style.display = "none";  
+            }
         }
 
-        dataContainer.style.opacity = 1;
+        if (dataContainer) dataContainer.style.opacity = 1;
     }, 400); 
 }

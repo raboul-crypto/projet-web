@@ -78,21 +78,25 @@
             <h4 class="history-main-title" style="color: var(--primary-color); margin: 10px 0; font-size: 1.4rem;">90 ans au service de l'innovation</h4>
         </div>
         
-        <div class="history-flex-content" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin-top: 20px;">
-            <div id="timeline-data" class="timeline-compact fade" style="flex: 1; min-width: 250px;">
-                <div class="year-row" style="display: flex; align-items: center; gap: 20px; margin-bottom: 10px;">
-                    <h2 class="timeline-year-small" id="display-year" style="color: var(--primary-color); margin: 0; font-size: 2rem;">1936</h2>
-                    <div class="timeline-nav-dots">
-                        <button class="nav-arrow" onclick="changeTimeline(-1)" style="cursor: pointer; padding: 5px 10px;">←</button>
-                        <button class="nav-arrow" onclick="changeTimeline(1)" style="cursor: pointer; padding: 5px 10px;">→</button>
-                    </div>
-                </div>
-                <h5 id="display-title" class="event-title" style="margin: 10px 0; font-size: 1.1rem;">Création de l'EFR</h5>
-                <p id="display-text" class="text-small" style="font-size: 0.9rem; line-height: 1.4;">
-                    L'école EFR est créée à Paris par Ernest Lavigne pour répondre aux besoins en radioélectricité.
-                </p>
-            </div>
-        </div>
+<div class="history-flex-content" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin-top: 20px;">
+    <div class="history-image-container" style="flex: 1; min-width: 200px; display: none;">
+        <img id="display-img" src="img/efrei_1936.png" alt="Illustration historique" style="width: 100%; border-radius: 8px; transition: opacity 0.4s;">
+    </div>
+
+    <div id="timeline-data" class="timeline-compact fade" style="flex: 1; min-width: 250px;">
+    <div class="year-row" style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 10px;">
+        <button class="nav-arrow" onclick="changeTimeline(-1)" style="cursor: pointer; padding: 5px 10px;">←</button>
+        
+        <h2 class="timeline-year-small" id="display-year" style="color: var(--primary-color); margin: 0; font-size: 2rem; min-width: 100px; text-align: center;">1936</h2>
+        
+        <button class="nav-arrow" onclick="changeTimeline(1)" style="cursor: pointer; padding: 5px 10px;">→</button>
+    </div>
+        <h5 id="display-title" class="event-title" style="margin: 10px 0; font-size: 1.1rem;">Création de l'EFR</h5>
+        <p id="display-text" class="text-small" style="font-size: 0.9rem; line-height: 1.4;">
+            L'école EFR est créée à Paris par Ernest Lavigne pour répondre aux besoins en radioélectricité.
+        </p>
+    </div>
+</div>
     </div>
 </section>
 </main>

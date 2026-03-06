@@ -16,8 +16,8 @@
         <div class="header-banner">
             <h1 class="header-title">Efrei - Département informatique</h1>
         </div>
-        <div id="openMenu" class="menu-btn" onclick="openNav()">☰</div>
         <button id="theme-toggle" class="theme-btn">🌕</button>
+        <div id="openMenu" class="menu-btn" onclick="openNav()">☰</div>
     </header>
 
     <div id="mySidebar" class="sidebar">

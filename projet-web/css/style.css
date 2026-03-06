@@ -189,7 +189,7 @@ header {
 /* Menu Burger */
 .menu-btn {
     cursor: pointer;
-    width: 150px;
+    width: auto;
     text-align: right;
     color: var(--text-light);
     font-size: 30px;
