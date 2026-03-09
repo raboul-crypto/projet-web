@@ -127,4 +127,23 @@ include('includes/header.php');
     </div>
 </section>
 
+<section class="content-block" style="margin-top: 30px; text-align: center;">
+    <div class="block-header">
+        <h2>Visite Virtuelle du Campus</h2>
+        <img src="img/pantheon-icon.png" alt="" class="watermark">
+    </div>
+    
+    <div class="video-container" style="position: relative; overflow: hidden; width: 100%; padding-top: 56.25%; border-radius: var(--border-radius); border: 1px solid var(--border-color); box-shadow: var(--shadow-card);">
+        <iframe 
+            src="https://www.virteem.com/galerie360/visites/efrei/index.htm#media=1" 
+            style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; border: none;" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    
+    <p style="margin-top: 15px; font-style: italic; font-size: 0.9rem;">
+        Passez en plein écran pour une meilleure immersion.
+    </p>
+</section>
+
 <?php include('includes/footer.php'); ?>
