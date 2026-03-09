@@ -565,7 +565,19 @@ h1 {
     text-align: left;
     line-height: 1.5;
 }
+.modal-content .modal-text p {
+    color: #333333 !important;
+}
 
+[data-theme="dark"] .modal-content .modal-text p {
+    color: #ffffff !important;
+}
+
+#theme-toggle {
+    min-width: 44px;
+    height: 44px;
+    line-height: 44px;
+}
 .close-modal {
     position: absolute;
     top: 10px;
