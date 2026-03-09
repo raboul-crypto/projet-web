@@ -8,7 +8,7 @@ $allData = getFormations();
 <main>
     <section class="content-block">
         <h2>Nos Cursus Informatiques</h2>
-        <p>Découvrez nos programmes du post-bac au grade de Master[cite: 10].</p>
+        <p>Découvrez nos programmes du post-bac au grade de Master.</p>
 
         <?php foreach (['prepas' => 'Cycle Prépa', 'bachelors' => 'Cycle Bachelor', 'ingenieur' => 'Cycle Ingénieur'] as $key => $label): ?>
             <h3><?php echo $label; ?></h3>
