@@ -1,0 +1,72 @@
+{
+  "prepas": [
+    {
+      "id": "prepa sci",
+      "titre": "Prépa Scientifique",
+      "niveau": "Post-Bac",
+      "objectifs": "Ce cycle en deux ans prépare nos étudiants en combinant formation scientifique et technique.",
+      "details": "Formation générale et professionnelle de l'ingénieur.",
+      "debouches": "Cycle Ingénieur Efrei"
+    },
+    {
+      "id": "prepa bio",
+      "titre": "Prépa Bio et Numérique",
+      "niveau": "Post-Bac",
+      "objectifs": "S'adresse aux étudiants intéressés par la biologie, la santé et les sciences du numérique.",
+      "details": "Matières scientifiques et bases du numérique.",
+      "debouches": "Ingénieur en Bio-Informatique / Santé"
+    },
+    {
+      "id": "prepa plus",
+      "titre": "Prépa PLUS",
+      "niveau": "Post-Bac",
+      "objectifs": "Passerelle vers le cycle ingénieur grâce à un parcours renforcé.",
+      "details": "Renforcement en mathématiques et physique.",
+      "debouches": "Cycle Ingénieur Efrei"
+    }
+  ],
+  "bachelors": [
+    {
+      "id": "bachelor web",
+      "titre": "Bachelor Web & IA",
+      "niveau": "Post-Bac+3",
+      "objectifs": "Apprendre à programmer, développer des applications et maîtriser les outils d'IA.",
+      "details": "Développement Web et Intelligence Artificielle.",
+      "debouches": "Développeur Web, Expert IA"
+    },
+    {
+      "id": "bachelor cyber",
+      "titre": "Bachelor Cybersécurité & Réseau",
+      "niveau": "Post-Bac+3",
+      "objectifs": "Concevoir et déployer des stratégies de sécurité des systèmes d'information.",
+      "details": "Sécurité réseaux et protection des données.",
+      "debouches": "Analyste Cybersécurité, Administrateur Réseau"
+    },
+    {
+      "id": "bachelor info",
+      "titre": "Bachelor Informatique",
+      "niveau": "Post-Bac+3",
+      "objectifs": "Forme des développeurs polyvalents capables d'opérer en Fullstack.",
+      "details": "DevOps, Back End ou Front End.",
+      "debouches": "Développeur Fullstack"
+    },
+    {
+      "id": "bachelor eth",
+      "titre": "Ethical Hacking",
+      "niveau": "Post-Bac+3",
+      "objectifs": "Maîtrise des compétences clés de la cybersécurité (tests d'intrusion).",
+      "details": "Approche orientée vers l'entreprise.",
+      "debouches": "Pentester, Expert en cybersécurité"
+    }
+  ],
+  "ingenieur": [
+    {
+      "id": "ingenieur",
+      "titre": "Diplôme d'Ingénieur",
+      "niveau": "Bac+5",
+      "objectifs": "Année de tronc commun avec semestre à l'international.",
+      "details": "Semestre de cours à Paris et projet d'ingénierie.",
+      "debouches": "Ingénieur Expert du Numérique"
+    }
+  ]
+}

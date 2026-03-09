@@ -1,56 +1,36 @@
-<?php 
-  $pageTitle = "Formations - Efrei";
-  include('includes/header.php'); 
+<?php
+$pageTitle = "Formations - Efrei";
+include('includes/header.php');
+require_once('includes/functions.php');
+$allData = getFormations();
 ?>
 
 <main>
     <section class="content-block">
-        <h2>Nos Cursus</h2>
-        <p>Cliquez sur une formation pour voir les détails.</p>
-        
-        <h3>Cycle Prépa</h3>
-        <div class="formation-grid">
-            <div class="card" onclick="openModal('prepa sci')">
-                <li>Prépa scientifique <span class="plus-info">+ d'infos</span></li>
-            </div>
-            <div class="card" onclick="openModal('prepa bio')">
-                <li>Prépa Bio et Numerique <span class="plus-info">+ d'infos</span></li>
-            </div>
-            <div class="card" onclick="openModal('prepa plus')">
-                <li>Prépa PLUS <span class="plus-info">+ d'infos</span></li>
-            </div>
-        </div>
+        <h2>Nos Cursus Informatiques</h2>
+        <p>Découvrez nos programmes du post-bac au grade de Master[cite: 10].</p>
 
-        <h3>Cycle Bachelor</h3>
-        <div class="formation-grid">
-            <div class="card" onclick="openModal('bachelor web')">
-                <li>Bachelor Web & IA <span class="plus-info">+ d'infos</span></li>
+        <?php foreach (['prepas' => 'Cycle Prépa', 'bachelors' => 'Cycle Bachelor', 'ingenieur' => 'Cycle Ingénieur'] as $key => $label): ?>
+            <h3><?php echo $label; ?></h3>
+            <div class="formation-grid">
+                <?php foreach ($allData[$key] as $f): ?>
+                    <div class="card" onclick="openModal('<?php echo $f['id']; ?>')">
+                        <li><?php echo $f['titre']; ?> <span class="plus-info">+ d'infos</span></li>
+                    </div>
+                <?php endforeach; ?>
             </div>
-            <div class="card" onclick="openModal('bachelor cyber')">
-                <li>Bachelor Cybersecurité & Réseau <span class="plus-info">+ d'infos</span></li>
-            </div>
-            <div class="card" onclick="openModal('bachelor info')">
-                <li>Bachelor informatique <span class="plus-info">+ d'infos</span></li>
-            </div>
-            <div class="card" onclick="openModal('bachelor eth')">
-                <li>Bachelor cybersécurité & ethical hacking <span class="plus-info">+ d'infos</span></li>
-            </div>
-        </div>
-
-        <h3>Cycle Ingénieur</h3>
-        <div class="formation-grid">
-            <div class="card" onclick="openModal('ingenieur')">
-                <li><span class="plus-info">Ingénieur</span></li>
-            </div>
-        </div>
+        <?php endforeach; ?>
     </section>
 </main>
-
-<div id="formationModal" class="modal">
+<div id="formationModal" class="modal" style="display: none;">
     <div class="modal-content">
-        <span class="close-modal" onclick="closeModal()">Fermer</span>
-        <div id="modalBody"></div>
+        <span class="close-modal" onclick="closeModal()" style="cursor:pointer; float:right;">&times; Fermer</span>
+        <div id="modalBody">
+        </div>
     </div>
 </div>
-
+<script>
+    const formationsData = <?php echo json_encode($allData); ?>;
+    console.log("Données chargées :", formationsData); 
+</script>
 <?php include('includes/footer.php'); ?>
