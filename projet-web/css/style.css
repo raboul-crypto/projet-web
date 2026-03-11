@@ -1,4 +1,3 @@
-
 :root {
     --primary-color: #970d0d;
     --secondary-color: #5a0808;
@@ -13,6 +12,9 @@
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* ========================================
+   DARK MODE
+   ======================================== */
 [data-theme="dark"] {
     --bg-color: #121212;
     --card-bg: rgba(30, 30, 30, 0.95);
@@ -71,6 +73,9 @@
     color: #ffffff !important;
 }
 
+/* ========================================
+   RESET & BASE
+   ======================================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -92,6 +97,9 @@ html, body {
     background-repeat: no-repeat;
 }
 
+/* ========================================
+   HEADER
+   ======================================== */
 header {
     position: sticky;
     top: 0;
@@ -132,6 +140,7 @@ header {
     font-weight: 600;
 }
 
+/* Navigation principale */
 .main-nav {
     background-color: var(--accent-color);
     padding: 10px 0;
@@ -158,6 +167,7 @@ header {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
+/* Bouton burger */
 .menu-btn {
     cursor: pointer;
     color: var(--text-light);
@@ -169,6 +179,7 @@ header {
     color: var(--accent-color);
 }
 
+/* Bouton thème */
 .theme-btn {
     background: transparent;
     border: none;
@@ -191,6 +202,9 @@ header {
     line-height: 44px;
 }
 
+/* ========================================
+   MAIN
+   ======================================== */
 main {
     max-width: 900px;
     width: 100%;
@@ -201,6 +215,7 @@ main {
     z-index: 1;
 }
 
+/* Bloc de contenu générique */
 .content-block {
     background-color: var(--card-bg);
     color: var(--text-main);
@@ -241,6 +256,9 @@ main {
     border-top: 1px solid #eee;
 }
 
+/* ========================================
+   ACCUEIL - GRILLE INFO
+   ======================================== */
 .info-globale {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -264,6 +282,9 @@ main {
     font-size: 1.8rem;
 }
 
+/* ========================================
+   CAROUSEL
+   ======================================== */
 .carousel-container {
     position: relative;
     background: #f9f9f9;
@@ -321,6 +342,9 @@ main {
 .prev { left: 10px; }
 .next { right: 10px; }
 
+/* ========================================
+   FORMATIONS - CARDS
+   ======================================== */
 .formation-grid {
     display: flex;
     flex-direction: column;
@@ -356,6 +380,10 @@ main {
     list-style: none;
     text-align: center;
 }
+
+/* ========================================
+   MODAL FORMATIONS
+   ======================================== */
 .modal {
     display: none;
     position: fixed;
@@ -421,6 +449,9 @@ main {
     color: var(--primary-color);
 }
 
+/* ========================================
+   EQUIPE ENSEIGNANTE
+   ======================================== */
 .equipe-grid {
     display: flex;
     flex-wrap: wrap;
@@ -494,6 +525,9 @@ main {
     padding-left: 15px;
 }
 
+/* ========================================
+   CONTACT
+   ======================================== */
 .contact-container {
     display: flex;
     flex-wrap: wrap;
@@ -589,7 +623,9 @@ main {
     padding: 25px;
 }
 
-
+/* ========================================
+   SIDEBAR
+   ======================================== */
 .sidebar {
     height: 100%;
     width: 0;
@@ -644,7 +680,9 @@ main {
     z-index: 999;
 }
 
-
+/* ========================================
+   FOOTER
+   ======================================== */
 footer {
     background-color: var(--secondary-color);
     background-image: url('../img/bande.jpg');
@@ -690,12 +728,17 @@ footer {
     font-size: 0.75rem;
 }
 
-
+/* ========================================
+   TITRES GENERAUX
+   ======================================== */
 h1 {
     color: var(--text-light);
     text-align: center;
 }
 
+/* ========================================
+   TABLEAU (barème)
+   ======================================== */
 .tableau-formations {
     width: 100%;
     border-collapse: collapse;
@@ -737,18 +780,24 @@ h1 {
     border-bottom: 1px solid #444;
 }
 
+/* ========================================
+   RESPONSIVE - TABLETTE (max 768px)
+   ======================================== */
 @media (max-width: 768px) {
 
+    /* Navigation */
     .main-nav ul {
         flex-direction: column;
         align-items: center;
         gap: 5px;
     }
 
+    /* Grille info accueil */
     .info-globale {
         grid-template-columns: 1fr;
     }
 
+    /* Contact */
     .contact-container {
         flex-direction: column;
     }
@@ -759,20 +808,24 @@ h1 {
         width: 100%;
     }
 
+    /* Equipe */
     .prof-card {
         width: 100%;
         max-width: 400px;
     }
 
+    /* Carousel */
     .carousel-container {
         height: 250px;
     }
 
+    /* Main */
     main {
         margin: 15px auto;
         padding: 0 15px 30px 15px;
     }
 
+    /* Footer */
     .footer-container {
         flex-direction: column;
         align-items: center;
@@ -781,6 +834,9 @@ h1 {
     }
 }
 
+/* ========================================
+   A PROPOS - CARDS MEMBRES
+   ======================================== */
 .apropos-grid {
     display: flex;
     flex-wrap: wrap;
@@ -848,9 +904,12 @@ h1 {
     text-align: left;
 }
 
-
+/* ========================================
+   RESPONSIVE - MOBILE (max 480px)
+   ======================================== */
 @media (max-width: 480px) {
 
+    /* Header */
     .main-header {
         flex-wrap: wrap;
         gap: 10px;
@@ -869,21 +928,25 @@ h1 {
         font-size: 1.1rem;
     }
 
+    /* Navigation */
     .main-nav a {
         font-size: 0.9rem;
         padding: 6px 10px;
     }
 
+    /* Contenu */
     .content-block {
         padding: 20px 15px;
     }
 
+    /* Cards formations */
     .card {
         width: 100%;
         max-width: unset;
         padding: 20px;
     }
 
+    /* Carousel */
     .carousel-container {
         height: 200px;
     }
@@ -894,10 +957,12 @@ h1 {
         font-size: 16px;
     }
 
+    /* Modal */
     .modal-content {
         padding: 25px 15px;
     }
 
+    /* Tableau */
     .tableau-formations {
         font-size: 0.8rem;
     }

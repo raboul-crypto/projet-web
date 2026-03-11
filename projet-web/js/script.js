@@ -39,6 +39,7 @@ window.closeNav = closeNav;
 function openModal(id) {
     if (typeof formationsData === 'undefined' || formationsData === null) return;
 
+    // trim() au cas où l'id contient des espaces parasites
     const idClean = id.trim();
 
     let formation = null;
@@ -48,10 +49,11 @@ function openModal(id) {
 
     if (formation) {
         const modalBody = document.getElementById('modalBody');
+        // On récupère le thème actuel pour adapter les couleurs
         const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-        const titleColor = isDark ? '#000000' : '#970d0d';
-        const niveauColor = isDark ? '#000000' : '#555555';
-        const textColor = isDark ? '#000000' : '#333333';
+        const titleColor = isDark ? '#ffffff' : '#970d0d';
+        const niveauColor = isDark ? '#cccccc' : '#555555';
+        const textColor = isDark ? '#ffffff' : '#333333';
         const hrColor = isDark ? '#555' : '#dddddd';
 
         modalBody.innerHTML = `
