@@ -760,3 +760,10 @@ h1 {
 .theme-btn:hover {
     transform: scale(1.2);             
 }
+
+
+footer a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
