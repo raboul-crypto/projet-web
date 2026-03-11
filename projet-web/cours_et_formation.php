@@ -14,7 +14,7 @@ $allData = getFormations();
             <h3><?php echo $label; ?></h3>
             <div class="formation-grid">
                 <?php foreach ($allData[$key] as $f): ?>
-                    <div class="card" onclick="openModal('<?php echo $f['id']; ?>')">
+                    <div class="card" onclick="openModal('<?php echo htmlspecialchars($f['id'], ENT_QUOTES); ?>')">
                         <li><?php echo $f['titre']; ?> <span class="plus-info">+ d'infos</span></li>
                     </div>
                 <?php endforeach; ?>

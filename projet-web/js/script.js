@@ -39,18 +39,26 @@ window.closeNav = closeNav;
 function openModal(id) {
     if (typeof formationsData === 'undefined' || formationsData === null) return;
 
+    const idClean = id.trim();
+
     let formation = null;
-    if (formationsData.prepas) formation = formationsData.prepas.find(f => f.id === id);
-    if (!formation && formationsData.bachelors) formation = formationsData.bachelors.find(f => f.id === id);
-    if (!formation && formationsData.ingenieur) formation = formationsData.ingenieur.find(f => f.id === id);
+    if (formationsData.prepas) formation = formationsData.prepas.find(f => f.id === idClean);
+    if (!formation && formationsData.bachelors) formation = formationsData.bachelors.find(f => f.id === idClean);
+    if (!formation && formationsData.ingenieur) formation = formationsData.ingenieur.find(f => f.id === idClean);
 
     if (formation) {
         const modalBody = document.getElementById('modalBody');
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        const titleColor = isDark ? '#000000' : '#970d0d';
+        const niveauColor = isDark ? '#000000' : '#555555';
+        const textColor = isDark ? '#000000' : '#333333';
+        const hrColor = isDark ? '#555' : '#dddddd';
+
         modalBody.innerHTML = `
-            <h2 style="color:white; text-align:center;">${formation.titre}</h2>
-            <p style="text-align:center; color:#ccc;"><strong>${formation.niveau}</strong></p>
-            <hr style="border:0; border-top:1px solid #555; margin:15px 0;">
-            <div style="color:white; text-align:left; line-height:1.5;">
+            <h2 style="color:${titleColor}; text-align:center;">${formation.titre}</h2>
+            <p style="text-align:center; color:${niveauColor};"><strong>${formation.niveau}</strong></p>
+            <hr style="border:0; border-top:1px solid ${hrColor}; margin:15px 0;">
+            <div style="color:${textColor}; text-align:left; line-height:1.5;">
                 <p><strong>Objectifs :</strong> ${formation.objectifs}</p>
                 <p><strong>Programme :</strong> ${formation.details}</p>
                 <p><strong>Débouchés :</strong> ${formation.debouches}</p>
