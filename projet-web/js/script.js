@@ -46,11 +46,18 @@ function openModal(id) {
 
     if (formation) {
         const modalBody = document.getElementById('modalBody');
+        // On récupère le thème actuel pour adapter les couleurs
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        const titleColor = isDark ? '#ffffff' : '#970d0d';
+        const niveauColor = isDark ? '#cccccc' : '#555555';
+        const textColor = isDark ? '#ffffff' : '#333333';
+        const hrColor = isDark ? '#555' : '#dddddd';
+
         modalBody.innerHTML = `
-            <h2 style="color:white; text-align:center;">${formation.titre}</h2>
-            <p style="text-align:center; color:#ccc;"><strong>${formation.niveau}</strong></p>
-            <hr style="border:0; border-top:1px solid #555; margin:15px 0;">
-            <div style="color:white; text-align:left; line-height:1.5;">
+            <h2 style="color:${titleColor}; text-align:center;">${formation.titre}</h2>
+            <p style="text-align:center; color:${niveauColor};"><strong>${formation.niveau}</strong></p>
+            <hr style="border:0; border-top:1px solid ${hrColor}; margin:15px 0;">
+            <div style="color:${textColor}; text-align:left; line-height:1.5;">
                 <p><strong>Objectifs :</strong> ${formation.objectifs}</p>
                 <p><strong>Programme :</strong> ${formation.details}</p>
                 <p><strong>Débouchés :</strong> ${formation.debouches}</p>
