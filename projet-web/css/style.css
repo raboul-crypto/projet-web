@@ -21,7 +21,8 @@
     --primary-color: #ff4d4d;
 }
 
-[data-theme="dark"] body {
+[data-theme="dark"] body,
+[data-theme="dark"] #section-contact {
     background-color: #121212;
 }
 

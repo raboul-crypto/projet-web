@@ -20,13 +20,7 @@
         <div id="openMenu" class="menu-btn" onclick="openNav()">☰</div>
     </header>
 
-    <div id="mySidebar" class="sidebar">
-        <span class="closebtn" onclick="closeNav()">×</span>
-        <h2>Navigation</h2>
-        <a href="acceuil.php">Accueil</a>
-        <a href="cours_et_formation.php">Formation et cours</a>
-        <a href="equipe_enseignante.php">Équipe</a>
-        <a href="contact.php">Contactez-nous</a>
-        <a href="apropos.php">À propos de nous</a>
+    <div id="mySidebar" class="sidebar" role="navigation">
+        <?php include('includes/navigation.php'); ?>
     </div>
     <div id="overlay" class="overlay" onclick="closeNav()"></div>
