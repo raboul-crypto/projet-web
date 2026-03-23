@@ -5,7 +5,6 @@
 
 <main>
 
-    <!-- Présentation du projet -->
     <section class="content-block">
         <h2>À Propos du Projet</h2>
         <p>
@@ -14,13 +13,12 @@
             son équipe enseignante et ses coordonnées.
         </p>
         <p>
-            Le site est développé en <strong>HTML5, CSS3, JavaScript et PHP</strong>, 
+            Le site est développé en <strong>HTML, CSS, JavaScript et PHP</strong>, 
             sans framework, conformément aux consignes du cours.
         </p>
 
         <hr class="separator">
 
-        <!-- Tableau récapitulatif des technos utilisées -->
         <h3 style="color: var(--primary-color); margin-bottom: 15px;">Technologies utilisées</h3>
         <table class="tableau-formations">
             <thead>
@@ -31,11 +29,11 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>HTML5</td>
-                    <td>Structure sémantique des pages</td>
+                    <td>HTML</td>
+                    <td>Structure des pages</td>
                 </tr>
                 <tr>
-                    <td>CSS3</td>
+                    <td>CSS</td>
                     <td>Mise en page, responsive, dark mode</td>
                 </tr>
                 <tr>

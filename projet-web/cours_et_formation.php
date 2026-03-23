@@ -23,16 +23,10 @@ $allData = getFormations();
     </section>
 </main>
 
-<!-- Modal de détail formation (unique) -->
 <div id="formationModal" class="modal">
     <div class="modal-content">
         <span class="close-modal" onclick="closeModal()">&times; Fermer</span>
         <div id="modalBody"></div>
     </div>
 </div>
-
-<script>
-    const formationsData = <?php echo json_encode($allData); ?>;
-    console.log("Données chargées :", formationsData); 
-</script>
 <?php include('includes/footer.php'); ?>

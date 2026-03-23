@@ -45,18 +45,18 @@
 [data-theme="dark"] h4,
 [data-theme="dark"] p,
 [data-theme="dark"] label {
-    color: #ffffff !important;
+    color: #ffffff ;
 }
 
 [data-theme="dark"] a {
-    color: #ffffff !important;
+    color: #ffffff ;
 }
 
 [data-theme="dark"] input,
 [data-theme="dark"] textarea {
-    background-color: #222 !important;
-    color: #ffffff !important;
-    border: 1px solid #555 !important;
+    background-color: #222 ;
+    color: #ffffff ;
+    border: 1px solid #555 ;
 }
 
 [data-theme="dark"] .prof-card-body .role,
@@ -69,7 +69,7 @@
 }
 
 [data-theme="dark"] .modal-content .modal-text p {
-    color: #ffffff !important;
+    color: #ffffff ;
 }
 
 
